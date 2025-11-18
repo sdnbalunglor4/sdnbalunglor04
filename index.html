@@ -1,34 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDN Balunglor 04</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDN Balung Lor 04 - Website Resmi</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <header class="shadow-md" style="background-color: #ffffff;">
+   <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+     <div class="flex items-center space-x-4">
+      <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #667eea;"><span class="text-2xl">🏫</span>
+      </div>
+      <div>
+       <h1 class="font-bold text-xl" id="school-name" style="color: #1a202c;">SDN Balung Lor 04</h1>
+       <p class="text-sm" id="school-tagline" style="color: #4a5568;">Membentuk Generasi Cerdas dan Berakhlak</p>
+      </div>
+     </div>
+     <div class="hidden md:flex space-x-6"><a href="#beranda" class="nav-link font-medium" style="color: #667eea;">Beranda</a> <a href="#tentang" class="nav-link font-medium" style="color: #4a5568;">Tentang</a> <a href="#program" class="nav-link font-medium" style="color: #4a5568;">Program</a> <a href="#kontak" class="nav-link font-medium" style="color: #4a5568;">Kontak</a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section id="beranda" class="hero-section py-20 text-white">
+    <div class="container mx-auto px-6 text-center">
+     <h2 class="text-4xl md:text-5xl font-bold mb-4" id="welcome-title">Selamat Datang di SDN Balung Lor 04</h2>
+     <p class="text-xl mb-8 opacity-90" id="welcome-text">Lembaga pendidikan yang berkomitmen membentuk karakter dan prestasi siswa</p><a href="#tentang" class="inline-block px-8 py-3 rounded-lg font-semibold transition-all hover:opacity-90" style="background-color: #ffffff; color: #667eea;">Pelajari Lebih Lanjut</a>
+    </div>
+   </section>
+   <section id="tentang" class="py-16" style="background-color: #f7fafc;">
+    <div class="container mx-auto px-6">
+     <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center" id="about-title" style="color: #1a202c;">Tentang Sekolah Kami</h2>
+      <div class="rounded-lg shadow-lg p-8" style="background-color: #ffffff;">
+       <p class="text-lg leading-relaxed mb-6" id="about-text" style="color: #4a5568;">SDN Balung Lor 04 adalah sekolah dasar negeri yang berlokasi di Kabupaten Jember. Kami berkomitmen untuk memberikan pendidikan berkualitas dengan memadukan kurikulum nasional dan pengembangan karakter siswa.</p>
+       <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="text-center p-4 rounded-lg" style="background-color: #f7fafc;">
+         <div class="text-4xl mb-2">
+          📚
+         </div>
+         <h3 class="font-bold mb-2" style="color: #1a202c;">Kurikulum Merdeka</h3>
+         <p class="text-sm" style="color: #4a5568;">Pembelajaran yang inovatif dan menyenangkan</p>
+        </div>
+        <div class="text-center p-4 rounded-lg" style="background-color: #f7fafc;">
+         <div class="text-4xl mb-2">
+          👨‍🏫
+         </div>
+         <h3 class="font-bold mb-2" style="color: #1a202c;">Guru Berpengalaman</h3>
+         <p class="text-sm" style="color: #4a5568;">Tenaga pendidik profesional dan berdedikasi</p>
+        </div>
+        <div class="text-center p-4 rounded-lg" style="background-color: #f7fafc;">
+         <div class="text-4xl mb-2">
+          🏆
+         </div>
+         <h3 class="font-bold mb-2" style="color: #1a202c;">Prestasi Gemilang</h3>
+         <p class="text-sm" style="color: #4a5568;">Berbagai penghargaan tingkat kabupaten</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="program" class="py-16" style="background-color: #ffffff;">
+    <div class="container mx-auto px-6">
+     <h2 class="text-3xl font-bold mb-12 text-center" style="color: #1a202c;">Program Unggulan</h2>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="card rounded-lg shadow-md p-6" style="background-color: #ffffff; border: 2px solid #e2e8f0;">
+       <div class="text-5xl mb-4 text-center">
+        🎨
+       </div>
+       <h3 class="text-xl font-bold mb-3 text-center" style="color: #1a202c;">Ekstrakurikuler</h3>
+       <p class="text-center" style="color: #4a5568;">Seni, olahraga, pramuka, dan berbagai kegiatan pengembangan bakat siswa</p>
+      </div>
+      <div class="card rounded-lg shadow-md p-6" style="background-color: #ffffff; border: 2px solid #e2e8f0;">
+       <div class="text-5xl mb-4 text-center">
+        💻
+       </div>
+       <h3 class="text-xl font-bold mb-3 text-center" style="color: #1a202c;">Literasi Digital</h3>
+       <p class="text-center" style="color: #4a5568;">Pengenalan teknologi dan pembelajaran berbasis digital untuk masa depan</p>
+      </div>
+      <div class="card rounded-lg shadow-md p-6" style="background-color: #ffffff; border: 2px solid #e2e8f0;">
+       <div class="text-5xl mb-4 text-center">
+        🌟
+       </div>
+       <h3 class="text-xl font-bold mb-3 text-center" style="color: #1a202c;">Pendidikan Karakter</h3>
+       <p class="text-center" style="color: #4a5568;">Pembentukan karakter religius, disiplin, dan bertanggung jawab</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="kontak" class="py-16" style="background-color: #f7fafc;">
+    <div class="container mx-auto px-6">
+     <h2 class="text-3xl font-bold mb-12 text-center" style="color: #1a202c;">Hubungi Kami</h2>
+     <div class="max-w-2xl mx-auto rounded-lg shadow-lg p-8" style="background-color: #ffffff;">
+      <div class="space-y-6">
+       <div class="flex items-start space-x-4">
+        <div class="text-2xl mt-1">
+         📍
+        </div>
+        <div>
+         <h3 class="font-bold mb-1" style="color: #1a202c;">Alamat</h3>
+         <p id="contact-address" style="color: #4a5568;">Jl. Pendidikan No. 123, Balung Lor, Balung, Kabupaten Jember, Jawa Timur</p>
+        </div>
+       </div>
+       <div class="flex items-start space-x-4">
+        <div class="text-2xl mt-1">
+         📞
+        </div>
+        <div>
+         <h3 class="font-bold mb-1" style="color: #1a202c;">Telepon</h3>
+         <p id="contact-phone" style="color: #4a5568;">(0331) 123456</p>
+        </div>
+       </div>
+       <div class="flex items-start space-x-4">
+        <div class="text-2xl mt-1">
+         ✉️
+        </div>
+        <div>
+         <h3 class="font-bold mb-1" style="color: #1a202c;">Email</h3>
+         <p id="contact-email" style="color: #4a5568;">info@sdnbalunglor04.sch.id</p>
+        </div>
+       </div>
+       <div class="flex items-start space-x-4">
+        <div class="text-2xl mt-1">
+         🌐
+        </div>
+        <div>
+         <h3 class="font-bold mb-1" style="color: #1a202c;">Website</h3>
+         <p style="color: #667eea;">sdnbalunglor04.sch.id</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="py-8" style="background-color: #1a202c;">
+   <div class="container mx-auto px-6 text-center">
+    <p id="footer-text" style="color: #a0aec0;">© 2024 SDN Balung Lor 04. Semua hak dilindungi.</p>
+    <p class="mt-2 text-sm" style="color: #718096;">sdnbalunglor04.sch.id</p>
+   </div>
+  </footer>
+  <script>
+        const defaultConfig = {
+            school_name: "SDN Balung Lor 04",
+            school_tagline: "Membentuk Generasi Cerdas dan Berakhlak",
+            welcome_title: "Selamat Datang di SDN Balung Lor 04",
+            welcome_text: "Lembaga pendidikan yang berkomitmen membentuk karakter dan prestasi siswa",
+            about_title: "Tentang Sekolah Kami",
+            about_text: "SDN Balung Lor 04 adalah sekolah dasar negeri yang berlokasi di Kabupaten Jember. Kami berkomitmen untuk memberikan pendidikan berkualitas dengan memadukan kurikulum nasional dan pengembangan karakter siswa.",
+            contact_address: "Jl. Pendidikan No. 123, Balung Lor, Balung, Kabupaten Jember, Jawa Timur",
+            contact_phone: "(0331) 123456",
+            contact_email: "info@sdnbalunglor04.sch.id",
+            footer_text: "© 2024 SDN Balung Lor 04. Semua hak dilindungi.",
+            primary_color: "#667eea",
+            surface_color: "#ffffff",
+            text_color: "#1a202c",
+            secondary_text_color: "#4a5568",
+            background_color: "#f7fafc",
+            font_family: "Segoe UI",
+            font_size: 16
+        };
 
-<header>
-    <h1>SDN Balunglor 04</h1>
-    <p>Website Resmi Sekolah</p>
-</header>
+        async function onConfigChange(config) {
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const surfaceColor = config.surface_color || defaultConfig.surface_color;
+            const textColor = config.text_color || defaultConfig.text_color;
+            const secondaryTextColor = config.secondary_text_color || defaultConfig.secondary_text_color;
+            const backgroundColor = config.background_color || defaultConfig.background_color;
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            
+            const baseFontStack = 'Tahoma, Geneva, Verdana, sans-serif';
+            document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
 
-<nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="visi-misi.html">Visi & Misi</a>
-    <a href="guru.html">Data Guru</a>
-    <a href="kontak.html">Kontak</a>
-</nav>
+            document.getElementById('school-name').textContent = config.school_name || defaultConfig.school_name;
+            document.getElementById('school-name').style.color = textColor;
+            document.getElementById('school-name').style.fontSize = `${baseSize * 1.25}px`;
+            
+            document.getElementById('school-tagline').textContent = config.school_tagline || defaultConfig.school_tagline;
+            document.getElementById('school-tagline').style.color = secondaryTextColor;
+            document.getElementById('school-tagline').style.fontSize = `${baseSize * 0.875}px`;
+            
+            document.getElementById('welcome-title').textContent = config.welcome_title || defaultConfig.welcome_title;
+            document.getElementById('welcome-title').style.fontSize = `${baseSize * 2.5}px`;
+            
+            document.getElementById('welcome-text').textContent = config.welcome_text || defaultConfig.welcome_text;
+            document.getElementById('welcome-text').style.fontSize = `${baseSize * 1.25}px`;
+            
+            document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+            document.getElementById('about-title').style.color = textColor;
+            document.getElementById('about-title').style.fontSize = `${baseSize * 1.875}px`;
+            
+            document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+            document.getElementById('about-text').style.color = secondaryTextColor;
+            document.getElementById('about-text').style.fontSize = `${baseSize * 1.125}px`;
+            
+            document.getElementById('contact-address').textContent = config.contact_address || defaultConfig.contact_address;
+            document.getElementById('contact-address').style.color = secondaryTextColor;
+            document.getElementById('contact-address').style.fontSize = `${baseSize}px`;
+            
+            document.getElementById('contact-phone').textContent = config.contact_phone || defaultConfig.contact_phone;
+            document.getElementById('contact-phone').style.color = secondaryTextColor;
+            document.getElementById('contact-phone').style.fontSize = `${baseSize}px`;
+            
+            document.getElementById('contact-email').textContent = config.contact_email || defaultConfig.contact_email;
+            document.getElementById('contact-email').style.color = secondaryTextColor;
+            document.getElementById('contact-email').style.fontSize = `${baseSize}px`;
+            
+            document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+            document.getElementById('footer-text').style.fontSize = `${baseSize}px`;
 
-<main>
-    <h2>Selamat Datang di Website SDN Balunglor 04</h2>
-    <p>Ini adalah versi awal website sekolah Anda.</p>
-</main>
+            document.querySelector('header').style.backgroundColor = surfaceColor;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.style.fontSize = `${baseSize}px`;
+            });
+            document.querySelectorAll('.nav-link')[0].style.color = primaryColor;
+            
+            const heroSection = document.querySelector('.hero-section');
+            heroSection.style.background = `linear-gradient(135deg, ${primaryColor} 0%, #764ba2 100%)`;
+            
+            document.querySelectorAll('section')[1].style.backgroundColor = backgroundColor;
+            document.querySelectorAll('section')[2].style.backgroundColor = surfaceColor;
+            document.querySelectorAll('section')[3].style.backgroundColor = backgroundColor;
+            
+            const aboutCard = document.querySelector('#tentang .rounded-lg');
+            aboutCard.style.backgroundColor = surfaceColor;
+            
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.backgroundColor = surfaceColor;
+            });
+            
+            const contactCard = document.querySelector('#kontak .rounded-lg');
+            contactCard.style.backgroundColor = surfaceColor;
+            
+            document.querySelector('footer').style.backgroundColor = textColor;
+        }
 
-<footer>
-    <p>© 2025 SDN Balunglor 04</p>
-</footer>
-
-</body>
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.surface_color || defaultConfig.surface_color,
+                            set: (value) => {
+                                config.surface_color = value;
+                                window.elementSdk.setConfig({ surface_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.secondary_text_color || defaultConfig.secondary_text_color,
+                            set: (value) => {
+                                config.secondary_text_color = value;
+                                window.elementSdk.setConfig({ secondary_text_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["school_name", config.school_name || defaultConfig.school_name],
+                    ["school_tagline", config.school_tagline || defaultConfig.school_tagline],
+                    ["welcome_title", config.welcome_title || defaultConfig.welcome_title],
+                    ["welcome_text", config.welcome_text || defaultConfig.welcome_text],
+                    ["about_title", config.about_title || defaultConfig.about_title],
+                    ["about_text", config.about_text || defaultConfig.about_text],
+                    ["contact_address", config.contact_address || defaultConfig.contact_address],
+                    ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
+                    ["contact_email", config.contact_email || defaultConfig.contact_email],
+                    ["footer_text", config.footer_text || defaultConfig.footer_text]
+                ])
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a063cd2f1a66d06',t:'MTc2MzQ1NjAwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
