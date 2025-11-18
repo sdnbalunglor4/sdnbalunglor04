@@ -3,19 +3,16 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SDN Balunglor 04</title>
+  <title>SDN Balunglor 04 - Website Resmi</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/data_sdk.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
   <style>
     body {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      height: 100%;
     }
     html {
-      height: 100%;
+      scroll-behavior: smooth;
     }
     .whatsapp-float {
       position: fixed;
@@ -36,18 +33,6 @@
     }
     .whatsapp-float:hover {
       transform: scale(1.05);
-    }
-    .loading-spinner {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      border-top-color: transparent;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
     }
     .photo-modal {
       display: none;
@@ -70,8 +55,16 @@
       max-height: 90%;
       position: relative;
     }
+    .hover-zoom {
+      transition: transform 0.3s ease;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.05);
+    }
   </style>
   <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
  <body class="bg-gray-50"><!-- Photo Modal -->
   <div id="photo-modal" class="photo-modal" onclick="closePhotoModal()">
@@ -90,8 +83,8 @@
    <div class="container mx-auto px-6 py-6">
     <div class="flex items-center justify-between">
      <div>
-      <h1 id="nama-sekolah" class="text-3xl font-bold">SDN Balunglor 04</h1>
-      <p id="tagline" class="text-blue-100 mt-1">Membentuk Generasi Cerdas dan Berakhlak Mulia</p>
+      <h1 class="text-3xl font-bold">SDN Balunglor 04</h1>
+      <p class="text-blue-100 mt-1">Membentuk Generasi Cerdas dan Berakhlak Mulia</p>
      </div>
      <div class="text-5xl">
       🏫
@@ -107,7 +100,6 @@
      <li><a href="#kegiatan" class="text-gray-700 hover:text-blue-600 font-semibold transition whitespace-nowrap">📸 Kegiatan</a></li>
      <li><a href="#galeri" class="text-gray-700 hover:text-blue-600 font-semibold transition whitespace-nowrap">🖼️ Galeri</a></li>
      <li><a href="#berita" class="text-gray-700 hover:text-blue-600 font-semibold transition whitespace-nowrap">📰 Berita</a></li>
-     <li><a href="#saran" class="text-gray-700 hover:text-blue-600 font-semibold transition whitespace-nowrap">💬 Saran</a></li>
      <li><a href="#kontak" class="text-gray-700 hover:text-blue-600 font-semibold transition whitespace-nowrap">📞 Kontak</a></li>
     </ul>
    </div>
@@ -140,7 +132,7 @@
    <section id="kegiatan" class="mb-12">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">📸 Kegiatan Sekolah</h2>
     <div class="grid md:grid-cols-3 gap-6">
-     <div class="bg-white rounded-xl shadow-md overflow-hidden">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden hover-zoom">
       <div class="bg-gradient-to-br from-green-400 to-green-600 h-48 flex items-center justify-center"><span class="text-7xl">🎨</span>
       </div>
       <div class="p-6">
@@ -148,7 +140,7 @@
        <p class="text-gray-600 mb-4">Siswa mengikuti lomba melukis tingkat kecamatan dan meraih juara 1.</p><button onclick="shareToWhatsApp('Lomba Melukis', 'Siswa mengikuti lomba melukis tingkat kecamatan')" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition w-full font-semibold">💬 Diskusi via WhatsApp</button>
       </div>
      </div>
-     <div class="bg-white rounded-xl shadow-md overflow-hidden">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden hover-zoom">
       <div class="bg-gradient-to-br from-purple-400 to-purple-600 h-48 flex items-center justify-center"><span class="text-7xl">⚽</span>
       </div>
       <div class="p-6">
@@ -156,7 +148,7 @@
        <p class="text-gray-600 mb-4">Kegiatan olahraga rutin setiap Jumat pagi untuk kesehatan siswa.</p><button onclick="shareToWhatsApp('Olahraga Bersama', 'Kegiatan olahraga rutin setiap Jumat pagi')" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition w-full font-semibold">💬 Diskusi via WhatsApp</button>
       </div>
      </div>
-     <div class="bg-white rounded-xl shadow-md overflow-hidden">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden hover-zoom">
       <div class="bg-gradient-to-br from-orange-400 to-orange-600 h-48 flex items-center justify-center"><span class="text-7xl">📚</span>
       </div>
       <div class="p-6">
@@ -171,89 +163,96 @@
      <h2 class="text-3xl font-bold text-gray-800">🖼️ Galeri Foto</h2><button onclick="openGooglePhotos()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold shadow-md flex items-center gap-2"> <span>📷</span> <span>Lihat Semua Foto</span> </button>
     </div>
     <div class="bg-white rounded-xl shadow-md p-6 mb-6">
-     <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6 rounded">
-      <p class="text-gray-700"><strong>💡 Untuk Admin:</strong> Klik emoji di bawah ini di Canva Editor untuk upload foto asli. Untuk koleksi foto lengkap, atur link Google Photos di pengaturan.</p>
+     <div class="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 mb-6 rounded-lg">
+      <h3 class="text-xl font-bold text-gray-800 mb-2">📝 Cara Upload Foto (Untuk Admin)</h3>
+      <ol class="text-gray-700 space-y-2 list-decimal list-inside">
+       <li>Upload semua foto kegiatan ke <strong>Google Photos</strong></li>
+       <li>Buat album publik (contoh: "Galeri SDN Balunglor 04")</li>
+       <li>Copy link share album</li>
+       <li>Paste link di baris 230 file HTML ini (cari: <code class="bg-gray-200 px-2 py-1 rounded">const googlePhotosLink</code>)</li>
+       <li>Upload ulang ke GitHub - Selesai! ✅</li>
+      </ol>
      </div>
      <div class="grid grid-cols-2 md:grid-cols-4 gap-4"><!-- Foto 1 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(0)">
-       <div class="bg-gradient-to-br from-blue-400 to-blue-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎓</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(0)">
+       <div class="bg-gradient-to-br from-blue-400 to-blue-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎓</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Upacara Bendera</p>
       </div><!-- Foto 2 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(1)">
-       <div class="bg-gradient-to-br from-green-400 to-green-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🏆</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(1)">
+       <div class="bg-gradient-to-br from-green-400 to-green-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🏆</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Juara Lomba</p>
       </div><!-- Foto 3 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(2)">
-       <div class="bg-gradient-to-br from-purple-400 to-purple-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎭</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(2)">
+       <div class="bg-gradient-to-br from-purple-400 to-purple-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎭</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Pentas Seni</p>
       </div><!-- Foto 4 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(3)">
-       <div class="bg-gradient-to-br from-red-400 to-red-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🕌</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(3)">
+       <div class="bg-gradient-to-br from-red-400 to-red-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🕌</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Kegiatan Keagamaan</p>
       </div><!-- Foto 5 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(4)">
-       <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🌳</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(4)">
+       <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🌳</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Penghijauan</p>
       </div><!-- Foto 6 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(5)">
-       <div class="bg-gradient-to-br from-pink-400 to-pink-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎪</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(5)">
+       <div class="bg-gradient-to-br from-pink-400 to-pink-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎪</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Karnaval Sekolah</p>
       </div><!-- Foto 7 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(6)">
-       <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🧪</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(6)">
+       <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🧪</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Praktikum IPA</p>
       </div><!-- Foto 8 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(7)">
-       <div class="bg-gradient-to-br from-teal-400 to-teal-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎨</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(7)">
+       <div class="bg-gradient-to-br from-teal-400 to-teal-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎨</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Seni Lukis</p>
       </div><!-- Foto 9 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(8)">
-       <div class="bg-gradient-to-br from-cyan-400 to-cyan-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">📖</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(8)">
+       <div class="bg-gradient-to-br from-cyan-400 to-cyan-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">📖</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Literasi</p>
       </div><!-- Foto 10 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(9)">
-       <div class="bg-gradient-to-br from-lime-400 to-lime-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">⚽</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(9)">
+       <div class="bg-gradient-to-br from-lime-400 to-lime-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">⚽</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Olahraga</p>
       </div><!-- Foto 11 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(10)">
-       <div class="bg-gradient-to-br from-amber-400 to-amber-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎤</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(10)">
+       <div class="bg-gradient-to-br from-amber-400 to-amber-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎤</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
        <p class="text-center text-sm text-gray-700 mt-2 font-semibold">Pidato</p>
       </div><!-- Foto 12 -->
-      <div class="relative group cursor-pointer" onclick="openPhotoModal(11)">
-       <div class="bg-gradient-to-br from-rose-400 to-rose-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md transition transform group-hover:scale-105"><span class="text-6xl">🎈</span>
+      <div class="relative group cursor-pointer hover-zoom" onclick="openPhotoModal(11)">
+       <div class="bg-gradient-to-br from-rose-400 to-rose-600 aspect-square rounded-lg flex items-center justify-center overflow-hidden shadow-md"><span class="text-6xl">🎈</span>
        </div>
        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition rounded-lg flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 text-4xl">🔍</span>
        </div>
@@ -263,7 +262,6 @@
      <div class="mt-8 pt-6 border-t border-gray-200 text-center">
       <h3 class="text-xl font-bold text-gray-800 mb-4">📚 Koleksi Foto Lengkap</h3>
       <p class="text-gray-600 mb-6">Lihat ratusan foto kegiatan sekolah lainnya di album Google Photos kami</p><button onclick="openGooglePhotos()" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition font-bold shadow-lg inline-flex items-center gap-3"> <span class="text-2xl">📷</span> <span>Buka Album Foto Lengkap</span> </button>
-      <p class="text-sm text-gray-500 mt-4">💡 Admin dapat mengatur link Google Photos di panel edit</p>
      </div>
     </div>
    </section><!-- Berita Section -->
@@ -285,45 +283,24 @@
       <p class="text-gray-600 mb-4">Selamat kepada siswa kelas 6 yang berhasil meraih juara 2 dalam Olimpiade Matematika tingkat Kabupaten. Prestasi membanggakan!</p><button onclick="shareToWhatsApp('Prestasi Lomba Matematika', 'Juara 2 Olimpiade Matematika tingkat Kabupaten')" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition w-full font-semibold">💬 Diskusi via WhatsApp</button>
      </div>
     </div>
-   </section><!-- Form Saran & Pengaduan -->
-   <section id="saran" class="mb-12">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">💬 Saran &amp; Pengaduan</h2>
-    <div class="bg-white rounded-xl shadow-md p-8">
-     <p class="text-gray-600 mb-6">Kami sangat menghargai masukan Anda untuk kemajuan sekolah. Silakan isi form di bawah ini:</p>
-     <form id="form-saran" class="space-y-6">
-      <div><label for="input-nama" class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label> <input type="text" id="input-nama" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Masukkan nama Anda" required>
-      </div>
-      <div><label for="input-kontak" class="block text-gray-700 font-semibold mb-2">Email / No. HP</label> <input type="text" id="input-kontak" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email atau nomor WhatsApp" required>
-      </div>
-      <div><label for="input-kategori" class="block text-gray-700 font-semibold mb-2">Kategori</label> <select id="input-kategori" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required> <option value="">Pilih Kategori</option> <option value="Saran">💡 Saran</option> <option value="Pengaduan">⚠️ Pengaduan</option> <option value="Pertanyaan">❓ Pertanyaan</option> <option value="Pujian">⭐ Pujian</option> </select>
-      </div>
-      <div><label for="input-pesan" class="block text-gray-700 font-semibold mb-2">Pesan</label> <textarea id="input-pesan" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tulis pesan Anda di sini..." required></textarea>
-      </div>
-      <div id="pesan-sukses" class="hidden bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-       ✅ Terima kasih! Pesan Anda telah berhasil dikirim. Admin akan segera menindaklanjuti.
-      </div>
-      <div id="pesan-error" class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
-       ❌ Maaf, terjadi kesalahan. Silakan coba lagi atau hubungi admin via WhatsApp.
-      </div>
-      <div id="pesan-limit" class="hidden bg-yellow-50 border border-yellow-200 text-yellow-800 px-4 py-3 rounded-lg">
-       ⚠️ Batas maksimum 999 pesan telah tercapai. Silakan hubungi admin via WhatsApp untuk pengaduan mendesak.
-      </div><button type="submit" id="btn-kirim" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg"> Kirim Pesan </button>
-     </form>
-     <div class="mt-6 pt-6 border-t border-gray-200">
-      <p class="text-gray-600 text-center mb-3">📊 Total Pesan yang Masuk: <span id="total-pesan" class="font-bold text-blue-600">0</span></p>
-      <p class="text-gray-500 text-sm text-center">Data tersimpan di Canva Sheet. Admin dapat melihat semua pesan di tab "Data".</p>
-     </div>
-    </div>
    </section><!-- Kontak Section -->
    <section id="kontak" class="mb-12">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">📞 Hubungi Kami</h2>
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">📞 Hubungi Kami</h2><!-- Info Box untuk Saran & Pengaduan -->
+    <div class="bg-gradient-to-r from-green-50 to-green-100 border-l-4 border-green-500 p-6 rounded-lg mb-6 shadow-md">
+     <div class="flex items-start gap-4"><span class="text-4xl">💬</span>
+      <div class="flex-1">
+       <h3 class="text-xl font-bold text-gray-800 mb-2">Saran &amp; Pengaduan</h3>
+       <p class="text-gray-700 mb-4">Punya saran atau pengaduan? Hubungi kami langsung via WhatsApp untuk respons cepat dari admin!</p><button onclick="openWhatsAppSaran()" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-bold shadow-lg inline-flex items-center gap-2"> <span>💬</span> <span>Kirim Saran/Pengaduan</span> </button>
+      </div>
+     </div>
+    </div>
     <div class="grid md:grid-cols-2 gap-6">
      <div class="bg-white rounded-xl shadow-md p-8">
       <h3 class="text-2xl font-bold text-blue-600 mb-4">Informasi Kontak</h3>
       <div class="space-y-4 text-gray-700">
-       <p><strong>Admin:</strong> <span id="nama-admin">Ibu Kholidah</span></p>
-       <p><strong>Alamat:</strong> <span id="alamat-sekolah">Jl. Pendidikan No. 123, Balunglor, Jember</span></p>
-       <p><strong>WhatsApp:</strong> <span id="display-wa">+62 852-3064-8427</span></p>
+       <p><strong>Admin:</strong> Ibu Kholidah</p>
+       <p><strong>Alamat:</strong> Jl. Pendidikan No. 123, Balunglor, Jember</p>
+       <p><strong>WhatsApp:</strong> +62 852-3064-8427</p>
       </div><button onclick="openWhatsApp()" class="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition w-full font-bold shadow-lg"> 💬 Chat WhatsApp Sekarang </button>
      </div>
      <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-md p-8">
@@ -349,22 +326,15 @@
   <div class="whatsapp-float" onclick="openWhatsApp()"><span class="text-2xl">💬</span> <span>Hubungi Admin</span>
   </div>
   <script>
-    // Default Configuration
-    const defaultConfig = {
-      nama_sekolah: "SDN Balunglor 04",
-      tagline: "Membentuk Generasi Cerdas dan Berakhlak Mulia",
-      nama_admin: "Ibu Kholidah",
-      nomor_whatsapp: "6285230648427",
-      alamat_sekolah: "Jl. Pendidikan No. 123, Balunglor, Jember",
-      link_google_photos: "",
-      background_color: "#3B82F6",
-      surface_color: "#FFFFFF",
-      text_color: "#1F2937",
-      primary_action_color: "#2563EB",
-      secondary_action_color: "#10B981"
-    };
+    // ===== PENGATURAN ADMIN - EDIT DI SINI =====
+    const nomorWhatsApp = "6285230648427"; // Format: 628xxx (62 + nomor tanpa 0)
+    const namaAdmin = "Ibu Kholidah";
+    
+    // Link Google Photos - Paste link album Google Photos di sini
+    const googlePhotosLink = ""; // Contoh: "https://photos.app.goo.gl/xxxxx"
+    // ==========================================
 
-    // Photo data for modal
+    // Photo data untuk modal
     const photoData = [
       { emoji: "🎓", caption: "Upacara Bendera", gradient: "from-blue-400 to-blue-600" },
       { emoji: "🏆", caption: "Juara Lomba", gradient: "from-green-400 to-green-600" },
@@ -379,126 +349,6 @@
       { emoji: "🎤", caption: "Pidato", gradient: "from-amber-400 to-amber-600" },
       { emoji: "🎈", caption: "Perayaan", gradient: "from-rose-400 to-rose-600" }
     ];
-
-    let allMessages = [];
-    let isSubmitting = false;
-
-    // Data SDK Handler
-    const dataHandler = {
-      onDataChanged(data) {
-        allMessages = data;
-        updateMessageCount();
-      }
-    };
-
-    // Initialize SDK
-    async function initializeApp() {
-      if (window.dataSdk) {
-        const result = await window.dataSdk.init(dataHandler);
-        if (!result.isOk) {
-          console.error("Failed to initialize Data SDK");
-        }
-      }
-
-      if (window.elementSdk) {
-        await window.elementSdk.init({
-          defaultConfig,
-          onConfigChange: async (config) => {
-            const namaSekolah = config.nama_sekolah || defaultConfig.nama_sekolah;
-            const tagline = config.tagline || defaultConfig.tagline;
-            const namaAdmin = config.nama_admin || defaultConfig.nama_admin;
-            const nomorWa = config.nomor_whatsapp || defaultConfig.nomor_whatsapp;
-            const alamat = config.alamat_sekolah || defaultConfig.alamat_sekolah;
-            const bgColor = config.background_color || defaultConfig.background_color;
-            const surfaceColor = config.surface_color || defaultConfig.surface_color;
-            const textColor = config.text_color || defaultConfig.text_color;
-            const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
-            const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
-
-            document.getElementById('nama-sekolah').textContent = namaSekolah;
-            document.getElementById('tagline').textContent = tagline;
-            document.getElementById('nama-admin').textContent = namaAdmin;
-            document.getElementById('alamat-sekolah').textContent = alamat;
-            
-            const formattedWa = nomorWa.replace(/^62/, '0').replace(/(\d{4})(\d{4})(\d{4})/, '$1-$2-$3');
-            document.getElementById('display-wa').textContent = `+${nomorWa.substring(0, 2)} ${formattedWa.substring(1)}`;
-
-            document.querySelector('header').style.backgroundColor = bgColor;
-            const surfaces = document.querySelectorAll('.bg-white');
-            surfaces.forEach(el => el.style.backgroundColor = surfaceColor);
-            
-            const texts = document.querySelectorAll('.text-gray-800, .text-gray-700');
-            texts.forEach(el => el.style.color = textColor);
-
-            const primaryBtns = document.querySelectorAll('.bg-blue-600, .bg-blue-500');
-            primaryBtns.forEach(el => el.style.backgroundColor = primaryColor);
-
-            const secondaryBtns = document.querySelectorAll('.bg-green-500');
-            secondaryBtns.forEach(el => el.style.backgroundColor = secondaryColor);
-          },
-          mapToCapabilities: (config) => ({
-            recolorables: [
-              {
-                get: () => config.background_color || defaultConfig.background_color,
-                set: (value) => {
-                  if (window.elementSdk) {
-                    window.elementSdk.config.background_color = value;
-                    window.elementSdk.setConfig({ background_color: value });
-                  }
-                }
-              },
-              {
-                get: () => config.surface_color || defaultConfig.surface_color,
-                set: (value) => {
-                  if (window.elementSdk) {
-                    window.elementSdk.config.surface_color = value;
-                    window.elementSdk.setConfig({ surface_color: value });
-                  }
-                }
-              },
-              {
-                get: () => config.text_color || defaultConfig.text_color,
-                set: (value) => {
-                  if (window.elementSdk) {
-                    window.elementSdk.config.text_color = value;
-                    window.elementSdk.setConfig({ text_color: value });
-                  }
-                }
-              },
-              {
-                get: () => config.primary_action_color || defaultConfig.primary_action_color,
-                set: (value) => {
-                  if (window.elementSdk) {
-                    window.elementSdk.config.primary_action_color = value;
-                    window.elementSdk.setConfig({ primary_action_color: value });
-                  }
-                }
-              },
-              {
-                get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-                set: (value) => {
-                  if (window.elementSdk) {
-                    window.elementSdk.config.secondary_action_color = value;
-                    window.elementSdk.setConfig({ secondary_action_color: value });
-                  }
-                }
-              }
-            ],
-            borderables: [],
-            fontEditable: undefined,
-            fontSizeable: undefined
-          }),
-          mapToEditPanelValues: (config) => new Map([
-            ["nama_sekolah", config.nama_sekolah || defaultConfig.nama_sekolah],
-            ["tagline", config.tagline || defaultConfig.tagline],
-            ["nama_admin", config.nama_admin || defaultConfig.nama_admin],
-            ["nomor_whatsapp", config.nomor_whatsapp || defaultConfig.nomor_whatsapp],
-            ["alamat_sekolah", config.alamat_sekolah || defaultConfig.alamat_sekolah],
-            ["link_google_photos", config.link_google_photos || defaultConfig.link_google_photos]
-          ])
-        });
-      }
-    }
 
     // Photo Modal Functions
     function openPhotoModal(index) {
@@ -518,119 +368,40 @@
       document.getElementById('photo-modal').classList.remove('active');
     }
 
-    // Update message count
-    function updateMessageCount() {
-      document.getElementById('total-pesan').textContent = allMessages.length;
-    }
-
-    // Form submission
-    document.getElementById('form-saran').addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      if (isSubmitting) return;
-
-      if (allMessages.length >= 999) {
-        showMessage('pesan-limit');
-        return;
-      }
-
-      isSubmitting = true;
-      const btnKirim = document.getElementById('btn-kirim');
-      const originalText = btnKirim.innerHTML;
-      btnKirim.innerHTML = '<span class="loading-spinner"></span> Mengirim...';
-      btnKirim.disabled = true;
-
-      hideAllMessages();
-
-      const nama = document.getElementById('input-nama').value;
-      const kontak = document.getElementById('input-kontak').value;
-      const kategori = document.getElementById('input-kategori').value;
-      const pesan = document.getElementById('input-pesan').value;
-
-      const newMessage = {
-        nama,
-        kontak,
-        kategori,
-        pesan,
-        tanggal: new Date().toISOString()
-      };
-
-      if (window.dataSdk) {
-        const result = await window.dataSdk.create(newMessage);
-        
-        btnKirim.innerHTML = originalText;
-        btnKirim.disabled = false;
-        isSubmitting = false;
-
-        if (result.isOk) {
-          showMessage('pesan-sukses');
-          document.getElementById('form-saran').reset();
-          setTimeout(hideAllMessages, 5000);
-        } else {
-          showMessage('pesan-error');
-        }
-      }
-    });
-
-    function showMessage(id) {
-      hideAllMessages();
-      document.getElementById(id).classList.remove('hidden');
-    }
-
-    function hideAllMessages() {
-      document.getElementById('pesan-sukses').classList.add('hidden');
-      document.getElementById('pesan-error').classList.add('hidden');
-      document.getElementById('pesan-limit').classList.add('hidden');
-    }
-
     // Google Photos function
     function openGooglePhotos() {
-      const config = window.elementSdk?.config || defaultConfig;
-      const link = config.link_google_photos || defaultConfig.link_google_photos;
-      
-      if (link && link.trim() !== '') {
-        window.open(link, '_blank', 'noopener,noreferrer');
+      if (googlePhotosLink && googlePhotosLink.trim() !== '') {
+        window.open(googlePhotosLink, '_blank', 'noopener,noreferrer');
       } else {
-        const modalDiv = document.createElement('div');
-        modalDiv.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-        modalDiv.innerHTML = `
-          <div class="bg-white rounded-xl p-8 max-w-md">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">📷 Link Belum Diatur</h3>
-            <p class="text-gray-600 mb-6">Admin belum mengatur link Google Photos. Silakan hubungi admin untuk informasi lebih lanjut.</p>
-            <div class="flex gap-3">
-              <button onclick="this.parentElement.parentElement.parentElement.remove()" class="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition font-semibold">Tutup</button>
-              <button onclick="openWhatsApp(); this.parentElement.parentElement.parentElement.remove()" class="flex-1 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-semibold">💬 Hubungi Admin</button>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(modalDiv);
+        // Jika belum diatur, buka WhatsApp
+        const pesan = `Halo ${namaAdmin}, saya ingin melihat galeri foto lengkap SDN Balunglor 04. Apakah ada link album foto yang bisa dibagikan?`;
+        const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
       }
     }
 
     // WhatsApp functions
     function openWhatsApp() {
-      const config = window.elementSdk?.config || defaultConfig;
-      const nomorWa = config.nomor_whatsapp || defaultConfig.nomor_whatsapp;
-      const namaAdmin = config.nama_admin || defaultConfig.nama_admin;
       const pesan = `Halo ${namaAdmin}, saya ingin bertanya tentang SDN Balunglor 04.`;
-      const url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+      const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    function openWhatsAppSaran() {
+      const pesan = `Halo ${namaAdmin}, saya ingin menyampaikan saran/pengaduan untuk SDN Balunglor 04:\n\n[Tulis saran/pengaduan Anda di sini]`;
+      const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     }
 
     function shareToWhatsApp(judul, deskripsi) {
-      const config = window.elementSdk?.config || defaultConfig;
-      const nomorWa = config.nomor_whatsapp || defaultConfig.nomor_whatsapp;
       const pesan = `Halo, saya ingin diskusi tentang:\n\n*${judul}*\n${deskripsi}\n\nBisa dibantu informasinya?`;
-      const url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+      const url = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(pesan)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
     }
 
     function scrollToSection(id) {
       document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
-
-    // Initialize on load
-    initializeApp();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a070a00e0d3f46d',t:'MTc2MzQ2NDQxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a079be511e19b07',t:'MTc2MzQ3MDM4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
