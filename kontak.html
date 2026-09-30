@@ -1,2 +1,197 @@
-<h1>Halaman ini masih kosong</h1>
-<p>Segera diisi.</p>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak & Pengaduan - SDN Balunglor 04</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
+    body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
+    h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
+    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; }
+    .menu-open { display: flex !important; }
+    @media (max-width: 767px) { .desktop-nav { display: none; } .mobile-nav { display: none; } }
+    @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+</head>
+<body class="bg-[#fffdf7]">
+ <div class="school-shell">
+  
+  <!-- NAVIGASI DROPDOWN BARU -->
+  <header class="w-full px-5 pt-5 md:px-10 md:pt-7 sticky top-4 z-50">
+   <nav class="mx-auto flex max-w-6xl items-center justify-between rounded-[1.7rem] bg-white px-5 py-3 shadow-[0_10px_25px_rgba(18,54,90,0.08)] border border-sky-100">
+    <a href="index.html" class="flex items-center gap-3">
+     <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-yellow-300 text-2xl shadow-sm">✦</span>
+     <span>
+      <strong class="brand-font block leading-none text-[#12365a] text-base">SDN Balunglor 04</strong>
+      <span class="mt-1 block text-xs font-bold tracking-wide text-[#ff6b5e]">Belajar • Bertumbuh • Berprestasi</span>
+     </span>
+    </a>
+
+    <div class="desktop-nav hidden md:flex items-center gap-4 text-sm font-extrabold text-[#12365a]">
+     <a href="index.html" class="hover:text-[#ff6b5e] px-2 py-2">Beranda</a>
+     
+     <div class="relative group">
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">
+       Profil Kami <i data-lucide="chevron-down" width="16" height="16"></i>
+      </button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-52 border border-sky-100">
+       <a href="profil.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Profil Sekolah & Visi</a>
+       <a href="profil.html#sambutan" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Sambutan Kepala Sekolah</a>
+      </div>
+     </div>
+
+     <div class="relative group">
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">
+       Pendidik & Staf <i data-lucide="chevron-down" width="16" height="16"></i>
+      </button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
+       <a href="profil.html#pendidik" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Dewan Guru Kelas</a>
+       <a href="profil.html#tendik" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Tenaga Administrasi</a>
+      </div>
+     </div>
+
+     <a href="artikel.html" class="hover:text-[#ff6b5e] px-2 py-2">Artikel</a>
+     <a href="galeri.html" class="hover:text-[#ff6b5e] px-2 py-2">Galeri</a>
+
+     <div class="relative group">
+      <button class="flex items-center gap-1 text-[#ff6b5e] px-2 py-2">
+       Lainnya <i data-lucide="chevron-down" width="16" height="16"></i>
+      </button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
+       <a href="kontak.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Buku Tamu</a>
+       <a href="#pengaduan" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Kotak Pengaduan</a>
+       <a href="kontak.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Kontak & Medsos</a>
+      </div>
+     </div>
+    </div>
+
+    <div class="hidden md:flex items-center gap-3">
+     <button onclick="alert('Fitur pencarian website aktif!')" class="p-2 text-[#12365a] hover:bg-sky-50 rounded-full transition"><i data-lucide="search" width="20" height="20"></i></button>
+     <a href="kontak.html" class="rounded-full bg-[#12365a] text-white px-5 py-2.5 text-xs font-extrabold shadow-md hover:bg-[#1a4a75] transition">SPMB 2026</a>
+    </div>
+
+    <button id="menu-button" type="button" class="mobile-toggle md:hidden rounded-xl p-2 text-[#12365a]"><i data-lucide="menu" width="26" height="26"></i></button>
+   </nav>
+
+   <div id="mobile-menu" class="mobile-nav mx-auto mt-2 max-w-6xl hidden flex-col gap-1 rounded-2xl bg-white p-4 text-center font-extrabold shadow-lg border border-sky-100">
+    <a href="index.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Beranda</a>
+    <a href="profil.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Profil & Sambutan</a>
+    <a href="artikel.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Artikel Sekolah</a>
+    <a href="galeri.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Galeri & Prestasi</a>
+    <a href="kontak.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#ff6b5e]">Buku Tamu & Pengaduan</a>
+    <a href="kontak.html" class="rounded-xl px-3 py-2 mt-2 bg-[#12365a] text-white">SPMB 2026</a>
+   </div>
+  </header>
+
+  <main class="space-y-16 py-12">
+   <section class="w-full px-5 md:px-10">
+    <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-white p-6 md:p-12 shadow-sm border border-sky-100">
+     <div class="text-center mb-8">
+      <span class="inline-block rounded-full bg-sky-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">BUKU TAMU & KESAN PESAN</span>
+      <h2 class="brand-font text-3xl font-bold text-[#12365a]">Tinggalkan Komentar & Dukungan</h2>
+      <p class="text-sm font-semibold text-[#315675] mt-1">Sampaikan pesan, kesan, atau dukungan untuk kemajuan SDN Balunglor 04.</p>
+     </div>
+     <form id="comment-form" onsubmit="addComment(event)" class="space-y-4 mb-10 bg-sky-50/50 p-6 rounded-2xl border border-sky-100">
+      <div><label class="block text-sm font-extrabold text-[#12365a] mb-1">Nama / Status</label><input type="text" id="comment-name" required class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a]" placeholder="Nama Anda..."></div>
+      <div><label class="block text-sm font-extrabold text-[#12365a] mb-1">Pesan / Dukungan</label><textarea id="comment-text" required rows="3" class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a]" placeholder="Tuliskan pesan..."></textarea></div>
+      <button type="submit" class="rounded-xl bg-[#ff6b5e] px-7 py-3 text-sm font-extrabold text-white shadow-md">Kirim Komentar 🚀</button>
+     </form>
+     <div id="comment-list" class="space-y-4">
+      <div class="rounded-2xl bg-sky-50 p-5 border border-sky-100">
+       <div class="flex justify-between items-center mb-1"><strong class="text-sm font-extrabold text-[#12365a]">Bunda Siti</strong><span class="text-xs font-bold text-gray-400">01 Oktober 2026</span></div>
+       <p class="text-sm font-semibold text-[#315675]">Selamat atas launching website resmi SDN Balunglor 04! Semoga semakin sukses. ✨</p>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section id="pengaduan" class="w-full px-5 md:px-10">
+    <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-[#dff4ff] p-6 md:p-12 shadow-sm border border-sky-200">
+     <div class="text-center mb-8">
+      <span class="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">LAYANAN ASPIRASI & PENGADUAN</span>
+      <h2 class="brand-font text-3xl font-bold text-[#12365a]">Kotak Pengaduan & Saran</h2>
+      <p class="text-sm font-semibold text-[#315675] mt-1">Kirimkan langsung ke email resmi sekolah: <strong class="text-[#ff6b5e]">sdnbalunglor4@gmail.com</strong></p>
+     </div>
+     <form onsubmit="sendComplaint(event)" class="space-y-5">
+      <div class="grid gap-5 md:grid-cols-2">
+       <div><label class="block text-sm font-extrabold text-[#12365a] mb-1">Nama Pelapor</label><input type="text" id="complaint-name" required class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a]" placeholder="Nama Anda..."></div>
+       <div>
+        <label class="block text-sm font-extrabold text-[#12365a] mb-1">Kategori</label>
+        <select id="complaint-category" class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a]">
+         <option value="Pengaduan / Keluhan">Pengaduan / Keluhan</option>
+         <option value="Saran & Masukan">Saran & Masukan</option>
+         <option value="Pertanyaan Informasi">Pertanyaan Informasi</option>
+        </select>
+       </div>
+      </div>
+      <div><label class="block text-sm font-extrabold text-[#12365a] mb-1">Isi Pesan</label><textarea id="complaint-text" required rows="4" class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a]" placeholder="Tuliskan detail..."></textarea></div>
+      <button type="submit" class="w-full rounded-xl bg-[#12365a] px-7 py-3.5 text-sm font-extrabold text-white shadow-md">Kirim ke Email Sekolah ✉️</button>
+     </form>
+    </div>
+   </section>
+
+   <section class="w-full bg-[#12365a] px-5 py-16 md:px-10 text-white">
+    <div class="mx-auto grid max-w-6xl gap-9 lg:grid-cols-[1fr_.9fr]">
+     <div>
+      <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-yellow-300 text-[#12365a]">Mari Terhubung</div>
+      <h2 class="brand-font mt-5 max-w-xl text-4xl font-bold leading-tight">Kunjungi dan kenali SDN Balunglor 04 lebih dekat.</h2>
+      <div class="mt-8">
+       <h3 class="text-sm font-extrabold text-yellow-300 mb-3 uppercase">Media Sosial Resmi</h3>
+       <div class="flex flex-wrap gap-3">
+        <a href="https://youtube.com/@sdnbalunglor04?si=RdseBhqdtgSnPQVo" target="_blank" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white hover:bg-white/20">▶️ YouTube</a>
+        <a href="https://www.instagram.com/sdnbalunglor_04" target="_blank" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white hover:bg-white/20">📸 Instagram</a>
+        <a href="https://www.facebook.com/share/19RqnApPer/" target="_blank" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white hover:bg-white/20">📘 Facebook</a>
+        <a href="https://www.tiktok.com/@sdn.balunglor.4" target="_blank" class="rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white hover:bg-white/20">🎵 TikTok</a>
+       </div>
+      </div>
+     </div>
+     <aside class="rounded-[2rem] p-7 shadow-lg bg-white text-[#12365a]">
+      <div class="flex gap-4"><i data-lucide="map-pin" class="mt-1 text-[#ff6b5e]" width="22" height="22"></i><div><h3 class="font-extrabold text-lg">Alamat</h3><p class="mt-1 font-semibold text-[#315675]">Jl. Jawa No. 22, Balunglor, Jember</p></div></div>
+      <div class="mt-6 flex gap-4"><i data-lucide="phone" class="mt-1 text-[#ff6b5e]" width="22" height="22"></i><div><h3 class="font-extrabold text-lg">Telepon & WhatsApp</h3><p class="mt-1 font-semibold text-[#315675]">(0336) 621 931</p><a href="https://wa.me/6285143118374" target="_blank" class="text-sm font-extrabold text-emerald-600 hover:underline">💬 0851-4311-8374</a></div></div>
+      <div class="mt-6 flex gap-4"><i data-lucide="mail" class="mt-1 text-[#ff6b5e]" width="22" height="22"></i><div><h3 class="font-extrabold text-lg">Email</h3><p class="mt-1 font-semibold text-[#315675]">sdnbalunglor4@gmail.com</p></div></div>
+     </aside>
+    </div>
+   </section>
+  </main>
+
+  <footer class="w-full px-5 py-7 text-center bg-[#0d2a47] text-white">
+   <p class="font-bold text-[#dff4ff]">© 2026 SDN Balunglor 04 • Tumbuh Ceria, Raih Cita-cita</p>
+  </footer>
+ </div>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+   lucide.createIcons();
+   const btn = document.getElementById("menu-button");
+   const menu = document.getElementById("mobile-menu");
+   btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  });
+
+  function addComment(e) {
+   e.preventDefault();
+   const name = document.getElementById('comment-name').value;
+   const text = document.getElementById('comment-text').value;
+   const list = document.getElementById('comment-list');
+   const date = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+   const div = document.createElement('div');
+   div.className = 'rounded-2xl bg-sky-50 p-5 border border-sky-100';
+   div.innerHTML = `<div class="flex justify-between items-center mb-1"><strong class="text-sm font-extrabold text-[#12365a]">${name}</strong><span class="text-xs font-bold text-gray-400">${date}</span></div><p class="text-sm font-semibold text-[#315675]">${text}</p>`;
+   list.prepend(div);
+   document.getElementById('comment-name').value = '';
+   document.getElementById('comment-text').value = '';
+   alert('Terima kasih! Komentar Anda berhasil dikirim.');
+  }
+
+  function sendComplaint(e) {
+   e.preventDefault();
+   const name = document.getElementById('complaint-name').value;
+   const category = document.getElementById('complaint-category').value;
+   const text = document.getElementById('complaint-text').value;
+   window.location.href = `mailto:sdnbalunglor4@gmail.com?subject=${encodeURIComponent(`[${category}] Dari${name}`)}&body=${encodeURIComponent(`Nama: ${name}\nKategori: ${category}\n\nPesan:\n${text}`)}`;
+  }
+ </script>
+</body>
+</html>
