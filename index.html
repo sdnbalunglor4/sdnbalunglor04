@@ -174,11 +174,9 @@
     <div class="hero-wave"></div>
    </section>
 
-   <!-- TENTANG KAMI & SAMBUTAN KEPALA SEKOLAH (DIGABUNG RAPI TANPA DUPLIKASI) -->
+   <!-- TENTANG KAMI & SAMBUTAN KEPALA SEKOLAH -->
    <section id="tentang" class="w-full bg-[#fffdf7] px-5 py-14 md:px-10 md:py-20">
     <div class="mx-auto max-w-6xl">
-     
-     <!-- Bagian Atas: Pengantar Tentang Sekolah -->
      <div class="grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
       <div class="reveal relative">
        <div class="absolute -left-4 -top-5 text-5xl" aria-hidden="true">✏️</div>
@@ -201,9 +199,8 @@
       </div>
      </div>
 
-     <!-- Bagian Bawah: Sambutan Kepala Sekolah Lengkap & Estetik -->
+     <!-- Sambutan Kepala Sekolah -->
      <div class="mt-16 rounded-[2.5rem] bg-white p-6 md:p-12 shadow-[0_10px_30px_rgba(18,54,90,0.06)] border border-sky-100">
-      
       <div class="text-center mb-8">
        <span class="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-3">SAMBUTAN KEPALA SEKOLAH • 01 OKTOBER 2026</span>
        <h3 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">Menuju Sekolah NGENCLIING melalui Pembelajaran Mendalam Berbasis Ekosistem Digital dan Religius</h3>
@@ -278,14 +275,13 @@
        </div>
       </div>
 
-      <!-- Tanda Tangan & Stempel Resmi (Sudah Menggunakan File ttd-stempel.png) -->
+      <!-- Tanda Tangan & Stempel Resmi -->
       <div class="mt-10 flex flex-col sm:flex-row justify-between items-end border-t border-sky-100 pt-8">
        <div></div>
        <div class="text-center sm:text-right relative w-full sm:w-auto">
         <p class="text-sm font-semibold text-[#315675]">Jember, 01 Oktober 2026</p>
         <p class="text-sm font-bold text-[#12365a] mt-1">Kepala Satuan Pendidikan SDN Balunglor 04</p>
         
-        <!-- Gambar Tanda Tangan & Stempel Proporsional -->
         <div class="my-2 flex justify-center sm:justify-end">
           <img src="ttd-stempel.png" alt="Tanda Tangan dan Stempel Kepala Sekolah" class="w-44 h-auto object-contain">
         </div>
@@ -427,7 +423,7 @@
     </div>
    </section>
 
-   <!-- GALERI -->
+   <!-- GALERI (DENGAN TOMBOL SUKA / LIKE) -->
    <section id="galeri" class="w-full bg-[#fffdf7] px-5 py-16 md:px-10 md:py-20">
     <div class="mx-auto max-w-6xl">
      <div class="reveal flex flex-col justify-between gap-4 md:flex-row md:items-end">
@@ -437,28 +433,69 @@
       </div>
       <p data-template-id="gallery-description" class="canva-text max-w-md font-semibold leading-relaxed md:text-right" style="color: rgb(49, 86, 117); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.55;">Setiap hari adalah kesempatan baru untuk belajar, tertawa, dan membuat kenangan baik.</p>
      </div>
-     <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-sky-100 shadow-sm">
-       <img data-template-id="gallery-image-one" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-BERKEBUN.jpg" alt="Belajar dan Berkebun">
-       <figcaption data-template-id="gallery-caption-one" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🌱 Belajar dan Berkebun</figcaption>
+     <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+      
+      <!-- Galeri 1 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-sky-100 shadow-sm flex flex-col justify-between bg-white">
+       <div>
+        <img data-template-id="gallery-image-one" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-BERKEBUN.jpg" alt="Belajar dan Berkebun">
+        <figcaption data-template-id="gallery-caption-one" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🌱 Belajar & Berkebun</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">24</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-yellow-100 shadow-sm">
-       <img data-template-id="gallery-image-two" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-SENAM.jpg" alt="Sehat dan Aktif Bersama">
-       <figcaption data-template-id="gallery-caption-two" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏃 Sehat dan Aktif Bersama</figcaption>
+
+      <!-- Galeri 2 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-yellow-100 shadow-sm flex flex-col justify-between bg-white">
+       <div>
+        <img data-template-id="gallery-image-two" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-SENAM.jpg" alt="Sehat dan Aktif Bersama">
+        <figcaption data-template-id="gallery-caption-two" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏃 Senam Sehat Bersama</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">31</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-orange-100 shadow-sm">
-       <img data-template-id="gallery-image-three" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-SHOLAT.jpg" alt="Khidmat dalam Beribadah">
-       <figcaption data-template-id="gallery-caption-three" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🕌 Khidmat dalam Beribadah</figcaption>
+
+      <!-- Galeri 3 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-orange-100 shadow-sm flex flex-col justify-between bg-white">
+       <div>
+        <img data-template-id="gallery-image-three" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-SHOLAT.jpg" alt="Khidmat dalam Beribadah">
+        <figcaption data-template-id="gallery-caption-three" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🕌 Budaya Religius</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">42</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-green-100 shadow-sm">
-       <img data-template-id="gallery-image-four" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-DALAM-PERPUSTAKAAN.jpg" alt="Nyaman Belajar di Perpustakaan">
-       <figcaption data-template-id="gallery-caption-four" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">📚 Nyaman Belajar di Perpustakaan</figcaption>
+
+      <!-- Galeri 4 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-green-100 shadow-sm flex flex-col justify-between bg-white">
+       <div>
+        <img data-template-id="gallery-image-four" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-DALAM-PERPUSTAKAAN.jpg" alt="Nyaman Belajar di Perpustakaan">
+        <figcaption data-template-id="gallery-caption-four" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">📚 Ruang Perpustakaan</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">19</span> Suka
+        </button>
+       </div>
       </figure>
+
      </div>
     </div>
    </section>
 
-   <!-- PRESTASI -->
+   <!-- PRESTASI (DENGAN TOMBOL SUKA / LIKE) -->
    <section id="prestasi" class="w-full bg-[#dff4ff] px-5 py-16 md:px-10 md:py-20">
     <div class="mx-auto max-w-6xl">
      <div class="reveal flex flex-col justify-between gap-4 md:flex-row md:items-end">
@@ -468,34 +505,163 @@
       </div>
       <p data-template-id="achievements-description" class="canva-text max-w-md font-semibold leading-relaxed md:text-right" style="color: rgb(49, 86, 117); font-weight: 600; font-style: normal; font-size: 16px;">Mengabadikan semangat, kerja keras, dan pencapaian anak-anak SDN Balunglor 04.</p>
      </div>
-     <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-yellow-100 shadow-sm">
-       <img data-template-id="achievement-image-one" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-JUARA-PRAMUKA.jpeg" alt="Prestasi Pramuka">
-       <figcaption data-template-id="achievement-caption-one" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏕️ Prestasi Pramuka</figcaption>
+     <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+      
+      <!-- Prestasi 1 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between">
+       <div>
+        <img data-template-id="achievement-image-one" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-JUARA-PRAMUKA.jpeg" alt="Prestasi Pramuka">
+        <figcaption data-template-id="achievement-caption-one" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏕️ Prestasi Pramuka</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Prestasi</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">35</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-orange-100 shadow-sm">
-       <img data-template-id="achievement-image-two" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-JUARA-RENANG.jpeg" alt="Juara Menyanyi">
-       <figcaption data-template-id="achievement-caption-two" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🎤 Juara 1 FLS3N 2026 – Menyanyi Solo Tingkat Kecamatan</figcaption>
+
+      <!-- Prestasi 2 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between">
+       <div>
+        <img data-template-id="achievement-image-two" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-JUARA-RENANG.jpeg" alt="Juara Menyanyi">
+        <figcaption data-template-id="achievement-caption-two" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🎤 Juara 1 Menyanyi Solo</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">FLS3N 2026</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">56</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-green-100 shadow-sm">
-       <img data-template-id="achievement-image-three" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-JUARA-TARI.jpeg" alt="Juara Tari">
-       <figcaption data-template-id="achievement-caption-three" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">💃 Juara 2 FLS3N 2026 – Seni Tari Tingkat Kecamatan</figcaption>
+
+      <!-- Prestasi 3 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between">
+       <div>
+        <img data-template-id="achievement-image-three" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-JUARA-TARI.jpeg" alt="Juara Tari">
+        <figcaption data-template-id="achievement-caption-three" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">💃 Juara 2 Seni Tari</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">FLS3N 2026</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">48</span> Suka
+        </button>
+       </div>
       </figure>
-      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-sky-100 shadow-sm">
-       <img data-template-id="achievement-image-four" class="canva-image h-48 w-full object-cover md:h-64" loading="lazy" src="FOTO-JUARA-MENYANYI.jpeg" alt="Juara Renang">
-       <figcaption data-template-id="achievement-caption-four" class="canva-text px-4 py-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏊 Juara Harapan 2 O2SN – Renang Putri Tingkat Kecamatan</figcaption>
+
+      <!-- Prestasi 4 -->
+      <figure class="gallery-tile reveal overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between">
+       <div>
+        <img data-template-id="achievement-image-four" class="canva-image h-48 w-full object-cover" loading="lazy" src="FOTO-JUARA-MENYANYI.jpeg" alt="Juara Renang">
+        <figcaption data-template-id="achievement-caption-four" class="canva-text px-4 pt-3 text-sm font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">🏊 Juara Harapan 2 Renang</figcaption>
+       </div>
+       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">O2SN 2026</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100 focus:outline-none">
+         ❤️ <span class="like-count">29</span> Suka
+        </button>
+       </div>
       </figure>
+
      </div>
     </div>
    </section>
 
-   <!-- KONTAK -->
+   <!-- BUKU TAMU & KOLOM KOMENTAR INTERAKTIF -->
+   <section id="buku-tamu" class="w-full bg-[#fffdf7] px-5 py-16 md:px-10">
+    <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-white p-6 md:p-12 shadow-[0_10px_30px_rgba(18,54,90,0.06)] border border-sky-100">
+     <div class="text-center mb-8">
+      <span class="inline-block rounded-full bg-sky-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">BUKU TAMU & KESAN PESAN</span>
+      <h2 class="brand-font text-3xl font-bold text-[#12365a]">Tinggalkan Komentar & Dukungan</h2>
+      <p class="text-sm font-semibold text-[#315675] mt-1">Sampaikan pesan, kesan, atau dukungan untuk kemajuan SDN Balunglor 04.</p>
+     </div>
+
+     <!-- Form Komentar -->
+     <form id="comment-form" onsubmit="addComment(event)" class="space-y-4 mb-10 bg-sky-50/50 p-6 rounded-2xl border border-sky-100">
+      <div>
+       <label class="block text-sm font-extrabold text-[#12365a] mb-1">Nama Lengkap / Status (Contoh: Bunda Siti - Wali Murid)</label>
+       <input type="text" id="comment-name" required class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a] focus:outline-none focus:ring-2 focus:ring-[#12365a]" placeholder="Tuliskan nama Anda...">
+      </div>
+      <div>
+       <label class="block text-sm font-extrabold text-[#12365a] mb-1">Pesan / Kesan / Dukungan</label>
+       <textarea id="comment-text" required rows="3" class="w-full rounded-xl border border-sky-200 bg-white px-4 py-3 text-sm font-semibold text-[#12365a] focus:outline-none focus:ring-2 focus:ring-[#12365a]" placeholder="Tuliskan pesan penyemangat untuk sekolah..."></textarea>
+      </div>
+      <button type="submit" class="rounded-xl bg-[#ff6b5e] px-7 py-3 text-sm font-extrabold text-white shadow-[0_4px_0_rgba(18,54,90,0.15)] transition hover:-translate-y-0.5">Kirim Komentar 🚀</button>
+     </form>
+
+     <!-- Daftar Komentar -->
+     <div id="comment-list" class="space-y-4">
+      <div class="rounded-2xl bg-sky-50 p-5 border border-sky-100">
+       <div class="flex justify-between items-center mb-1">
+        <strong class="text-sm font-extrabold text-[#12365a]">Bunda Siti (Wali Murid Kelas 4)</strong>
+        <span class="text-xs font-bold text-gray-400">01 Oktober 2026</span>
+       </div>
+       <p class="text-sm font-semibold text-[#315675]">Selamat atas launching website resmi SDN Balunglor 04! Semoga semakin sukses, jaya selalu, dan menginspirasi. ✨</p>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- KOLOM PENGADUAN & ASPIRASI (TERHUBUNG KE EMAIL SEKOLAH) -->
+   <section id="pengaduan" class="w-full bg-[#dff4ff] px-5 py-16 md:px-10">
+    <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-white p-6 md:p-12 shadow-[0_10px_30px_rgba(18,54,90,0.06)] border border-sky-200">
+     <div class="text-center mb-8">
+      <span class="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">LAYANAN ASPIRASI & PENGADUAN</span>
+      <h2 class="brand-font text-3xl font-bold text-[#12365a]">Kotak Pengaduan & Saran</h2>
+      <p class="text-sm font-semibold text-[#315675] mt-1">Punya pertanyaan, kritik, atau masukan? Kirimkan langsung ke email resmi sekolah: <strong class="text-[#ff6b5e]">sdnbalunglor4@gmail.com</strong></p>
+     </div>
+
+     <form onsubmit="sendComplaint(event)" class="space-y-5">
+      <div class="grid gap-5 md:grid-cols-2">
+       <div>
+        <label class="block text-sm font-extrabold text-[#12365a] mb-1">Nama Lengkap / Pelapor</label>
+        <input type="text" id="complaint-name" required class="w-full rounded-xl border border-sky-200 bg-sky-50/30 px-4 py-3 text-sm font-semibold text-[#12365a] focus:outline-none focus:ring-2 focus:ring-[#12365a]" placeholder="Nama Anda...">
+       </div>
+       <div>
+        <label class="block text-sm font-extrabold text-[#12365a] mb-1">Kategori Pesan</label>
+        <select id="complaint-category" class="w-full rounded-xl border border-sky-200 bg-sky-50/30 px-4 py-3 text-sm font-semibold text-[#12365a] focus:outline-none focus:ring-2 focus:ring-[#12365a]">
+         <option value="Pengaduan / Keluhan">Pengaduan / Keluhan</option>
+         <option value="Saran & Masukan">Saran & Masukan</option>
+         <option value="Pertanyaan Informasi">Pertanyaan Informasi Sekolah</option>
+        </select>
+       </div>
+      </div>
+      <div>
+       <label class="block text-sm font-extrabold text-[#12365a] mb-1">Isi Pengaduan / Pesan</label>
+       <textarea id="complaint-text" required rows="4" class="w-full rounded-xl border border-sky-200 bg-sky-50/30 px-4 py-3 text-sm font-semibold text-[#12365a] focus:outline-none focus:ring-2 focus:ring-[#12365a]" placeholder="Tuliskan detail pengaduan atau saran Anda secara jelas..."></textarea>
+      </div>
+      <button type="submit" class="w-full rounded-xl bg-[#12365a] px-7 py-3.5 text-sm font-extrabold text-white shadow-md transition hover:bg-[#1a4a75]">Kirim ke Email Sekolah (sdnbalunglor4@gmail.com) ✉️</button>
+     </form>
+    </div>
+   </section>
+
+   <!-- KONTAK & MEDIA SOSIAL -->
    <section id="kontak" class="w-full bg-[#12365a] px-5 py-16 md:px-10">
     <div class="mx-auto grid max-w-6xl gap-9 lg:grid-cols-[1fr_.9fr]">
      <div class="reveal">
       <div data-template-id="contact-kicker" class="canva-tag inline-flex rounded-full px-4 py-2 text-sm font-extrabold" style="background: rgb(255, 201, 40); color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 16px;">Mari Terhubung</div>
       <h2 data-template-id="contact-title" class="canva-text brand-font mt-5 max-w-xl text-4xl font-bold leading-tight md:text-5xl" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.02rem;">Kunjungi dan kenali SDN Balunglor 04 lebih dekat.</h2>
       <p data-template-id="contact-description" class="canva-text mt-5 max-w-xl text-lg font-semibold leading-relaxed" style="color: rgb(223, 244, 255); font-weight: 600; font-style: normal; font-size: 16px; line-height: 1.55;">Kami senang menyambut orang tua dan masyarakat untuk bersama-sama mendukung perjalanan belajar anak-anak.</p>
+      
+      <!-- Media Sosial Resmi -->
+      <div class="mt-8">
+       <h3 class="text-sm font-extrabold text-yellow-300 mb-3 tracking-wide uppercase">Media Sosial Resmi</h3>
+       <div class="flex flex-wrap gap-3">
+        <a href="https://youtube.com/@sdnbalunglor04?si=RdseBhqdtgSnPQVo" target="_blank" class="flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-white/20">
+         ▶️ YouTube
+        </a>
+        <a href="https://www.instagram.com/sdnbalunglor_04?stkn=N3R2emwxbndxOW1n" target="_blank" class="flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-white/20">
+         📸 Instagram
+        </a>
+        <a href="https://www.facebook.com/share/19RqnApPer/" target="_blank" class="flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-white/20">
+         📘 Facebook
+        </a>
+        <a href="https://www.tiktok.com/@sdn.balunglor.4?_r=1&_t=ZS-9A9fx3RKfIb" target="_blank" class="flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-white/20">
+         🎵 TikTok
+        </a>
+       </div>
+      </div>
+
      </div>
      <aside data-template-id="contact-card" class="canva-card reveal rounded-[2rem] p-7 shadow-lg" style="background: rgb(255, 255, 255);">
       <div class="flex gap-4">
@@ -517,8 +683,20 @@
       <div class="mt-6 flex gap-4">
        <i data-lucide="phone" class="mt-1 shrink-0 text-[#ff6b5e]" width="22" height="22" aria-hidden="true"></i>
        <div>
-        <h3 data-template-id="phone-label" class="canva-text font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 19px;">Telepon</h3>
-        <p data-template-id="phone-value" class="canva-text mt-1 font-semibold" style="color: rgb(49, 86, 117); font-weight: 600; font-style: normal; font-size: 16px;">(0336) 621 931</p>
+        <h3 data-template-id="phone-label" class="canva-text font-extrabold" style="color: rgb(18, 54, 90); font-weight: 800; font-style: normal; font-size: 19px;">Telepon &amp; WhatsApp</h3>
+        <p data-template-id="phone-value" class="canva-text mt-1 font-semibold" style="color: rgb(49, 86, 117); font-weight: 600; font-style: normal; font-size: 16px;">Telepon: (0336) 621 931</p>
+        <p class="mt-1">
+         <a href="https://wa.me/6285143118374" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-extrabold text-emerald-600 hover:underline">
+          💬 WhatsApp: 0851-4311-8374
+         </a>
+        </p>
+       </div>
+      </div>
+      <div class="mt-6 flex gap-4">
+       <i data-lucide="mail" class="mt-1 shrink-0 text-[#ff6b5e]" width="22" height="22" aria-hidden="true"></i>
+       <div>
+        <h3 class="canva-text font-extrabold text-[#12365a]" style="font-size: 19px;">Email Resmi</h3>
+        <p class="canva-text mt-1 font-semibold text-[#315675]">sdnbalunglor4@gmail.com</p>
        </div>
       </div>
      </aside>
@@ -531,6 +709,7 @@
   </footer>
  </div>
 
+ <!-- SCRIPT INTERAKTIF -->
  <script>
   document.addEventListener("DOMContentLoaded", function () {
    lucide.createIcons();
@@ -550,6 +729,60 @@
     });
    });
   });
+
+  // Fungsi Tombol Suka (Like)
+  function likePhoto(btn) {
+   const countSpan = btn.querySelector('.like-count');
+   let count = parseInt(countSpan.textContent);
+   count++;
+   countSpan.textContent = count;
+   btn.classList.add('scale-110', 'bg-pink-100');
+   setTimeout(() => btn.classList.remove('scale-110'), 200);
+  }
+
+  // Fungsi Tambah Komentar / Buku Tamu
+  function addComment(e) {
+   e.preventDefault();
+   const nameInput = document.getElementById('comment-name');
+   const textInput = document.getElementById('comment-text');
+   const list = document.getElementById('comment-list');
+   
+   const name = nameInput.value;
+   const text = textInput.value;
+   const date = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+
+   const commentDiv = document.createElement('div');
+   commentDiv.className = 'rounded-2xl bg-sky-50 p-5 border border-sky-100';
+   commentDiv.innerHTML = `
+    <div class="flex justify-between items-center mb-1">
+     <strong class="text-sm font-extrabold text-[#12365a]">${escapeHtml(name)}</strong>
+     <span class="text-xs font-bold text-gray-400">${date}</span>
+    </div>
+    <p class="text-sm font-semibold text-[#315675]">${escapeHtml(text)}</p>
+   `;
+   
+   list.prepend(commentDiv);
+   nameInput.value = '';
+   textInput.value = '';
+   alert('Terima kasih! Komentar Anda berhasil dikirim.');
+  }
+
+  // Fungsi Kirim Pengaduan / Aspirasi ke Email Sekolah
+  function sendComplaint(e) {
+   e.preventDefault();
+   const name = document.getElementById('complaint-name').value;
+   const category = document.getElementById('complaint-category').value;
+   const text = document.getElementById('complaint-text').value;
+
+   const subject = encodeURIComponent(`[${category}] Pengaduan dari ${name}`);
+   const body = encodeURIComponent(`Nama Pelapor: ${name}\nKategori: ${category}\n\nIsi Pesan / Pengaduan:\n${text}`);
+
+   window.location.href = `mailto:sdnbalunglor4@gmail.com?subject=${subject}&body=${body}`;
+  }
+
+  function escapeHtml(str) {
+   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  }
  </script>
 </body>
 </html>
