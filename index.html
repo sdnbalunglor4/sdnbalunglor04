@@ -9,20 +9,18 @@
     :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
     body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
     h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
-    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; }
+    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; background-image: radial-gradient(circle at 5% 13%, rgba(255, 201, 40, .18) 0 38px, transparent 39px); }
     .activity-card { transition: transform .25s ease, box-shadow .25s ease; }
     .activity-card:hover { transform: translateY(-7px); box-shadow: 0 18px 30px rgba(18, 54, 90, .13); }
-    .menu-open { display: flex !important; }
-    @media (max-width: 767px) { .desktop-nav { display: none; } .mobile-nav { display: none; } }
+    @media (max-width: 767px) { .desktop-nav { display: none; } }
     @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
   </style>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
 </head>
-<body class="bg-[#fffdf7]">
+<body>
  <div class="school-shell">
-  
-  <!-- NAVIGASI DROPDOWN BARU -->
+  <!-- NAVIGASI UTAMA -->
   <header class="w-full px-5 pt-5 md:px-10 md:pt-7 sticky top-4 z-50">
    <nav class="mx-auto flex max-w-6xl items-center justify-between rounded-[1.7rem] bg-white px-5 py-3 shadow-[0_10px_25px_rgba(18,54,90,0.08)] border border-sky-100">
     <a href="index.html" class="flex items-center gap-3">
@@ -32,37 +30,24 @@
       <span class="mt-1 block text-xs font-bold tracking-wide text-[#ff6b5e]">Belajar • Bertumbuh • Berprestasi</span>
      </span>
     </a>
-
     <div class="desktop-nav hidden md:flex items-center gap-4 text-sm font-extrabold text-[#12365a]">
      <a href="index.html" class="text-[#ff6b5e] px-2 py-2">Beranda</a>
-     
      <div class="relative group">
-      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">
-       Profil Kami <i data-lucide="chevron-down" width="16" height="16"></i>
-      </button>
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">Profil Kami <i data-lucide="chevron-down" width="16" height="16"></i></button>
       <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-52 border border-sky-100">
-       <a href="profil.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Profil Sekolah & Visi</a>
-       <a href="profil.html#sambutan" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Sambutan Kepala Sekolah</a>
+       <a href="profil.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Sambutan Kepala Sekolah</a>
       </div>
      </div>
-
      <div class="relative group">
-      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">
-       Pendidik & Staf <i data-lucide="chevron-down" width="16" height="16"></i>
-      </button>
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">Pendidik & Staf <i data-lucide="chevron-down" width="16" height="16"></i></button>
       <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
-       <a href="profil.html#pendidik" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Dewan Guru Kelas</a>
-       <a href="profil.html#tendik" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Tenaga Administrasi</a>
+       <a href="pendidik.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Dewan Guru & Staf</a>
       </div>
      </div>
-
-     <a href="artikel.html" class="hover:text-[#ff6b5e] px-2 py-2">Artikel</a>
+     <a href="artikel.html" class="hover:text-[#ff6b5e] px-2 py-2">Berita</a>
      <a href="galeri.html" class="hover:text-[#ff6b5e] px-2 py-2">Galeri</a>
-
      <div class="relative group">
-      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">
-       Lainnya <i data-lucide="chevron-down" width="16" height="16"></i>
-      </button>
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">Lainnya <i data-lucide="chevron-down" width="16" height="16"></i></button>
       <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
        <a href="kontak.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Buku Tamu</a>
        <a href="kontak.html#pengaduan" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Kotak Pengaduan</a>
@@ -70,22 +55,20 @@
       </div>
      </div>
     </div>
-
     <div class="hidden md:flex items-center gap-3">
-     <button onclick="alert('Fitur pencarian website aktif!')" class="p-2 text-[#12365a] hover:bg-sky-50 rounded-full transition"><i data-lucide="search" width="20" height="20"></i></button>
-     <a href="kontak.html" class="rounded-full bg-[#12365a] text-white px-5 py-2.5 text-xs font-extrabold shadow-md hover:bg-[#1a4a75] transition">SPMB 2026</a>
+     <button onclick="alert('Fitur pencarian aktif!')" class="p-2 text-[#12365a] hover:bg-sky-50 rounded-full transition"><i data-lucide="search" width="20" height="20"></i></button>
+     <a href="#" onclick="alert('Tunggu pendaftaran SPMB 2027!'); return false;" class="rounded-full bg-[#12365a] text-white px-5 py-2.5 text-xs font-extrabold shadow-md hover:bg-[#1a4a75] transition">SPMB 2027</a>
     </div>
-
     <button id="menu-button" type="button" class="mobile-toggle md:hidden rounded-xl p-2 text-[#12365a]"><i data-lucide="menu" width="26" height="26"></i></button>
    </nav>
-
    <div id="mobile-menu" class="mobile-nav mx-auto mt-2 max-w-6xl hidden flex-col gap-1 rounded-2xl bg-white p-4 text-center font-extrabold shadow-lg border border-sky-100">
     <a href="index.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#ff6b5e]">Beranda</a>
-    <a href="profil.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Profil & Sambutan</a>
-    <a href="artikel.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Artikel Sekolah</a>
-    <a href="galeri.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Galeri & Prestasi</a>
+    <a href="profil.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Sambutan Kepala Sekolah</a>
+    <a href="pendidik.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Pendidik & Staf</a>
+    <a href="artikel.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Berita Sekolah</a>
+    <a href="galeri.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Galeri & Video</a>
     <a href="kontak.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Buku Tamu & Pengaduan</a>
-    <a href="kontak.html" class="rounded-xl px-3 py-2 mt-2 bg-[#12365a] text-white">SPMB 2026</a>
+    <a href="#" onclick="alert('Tunggu pendaftaran SPMB 2027!'); return false;" class="rounded-xl px-3 py-2 mt-2 bg-[#12365a] text-white">SPMB 2027</a>
    </div>
   </header>
 
@@ -96,7 +79,7 @@
       <div class="mb-5 inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#d9f5df] text-[#17613a]">Sekolah Dasar yang Ceria</div>
       <h1 class="brand-font max-w-xl text-[2.8rem] font-bold leading-[1.03] text-[#12365a] md:text-[4.3rem]">Tempat kecil untuk mimpi-mimpi besar.</h1>
       <p class="mt-6 max-w-xl text-lg font-semibold leading-relaxed text-[#315675] md:text-xl">Selamat datang di SDN Balunglor 04. Bersama kami, setiap anak belajar dengan gembira, percaya diri, dan penuh rasa ingin tahu.</p>
-      <a href="profil.html" class="mt-8 inline-flex items-center gap-2 rounded-full px-6 py-4 font-extrabold bg-[#ff6b5e] text-white shadow-md transition hover:-translate-y-1"><span>Kenali Sekolah Kami</span><i data-lucide="arrow-right" width="19" height="19"></i></a>
+      <a href="profil.html" class="mt-8 inline-flex items-center gap-2 rounded-full px-6 py-4 font-extrabold bg-[#ff6b5e] text-white shadow-md transition hover:-translate-y-1"><span>Sambutan Kepala Sekolah</span><i data-lucide="arrow-right" width="19" height="19"></i></a>
      </div>
      <div class="relative mx-auto w-full max-w-lg">
       <div class="overflow-hidden rounded-[2.8rem] border-[10px] border-white bg-white shadow-lg">
@@ -134,7 +117,7 @@
    </section>
   </main>
 
-  <footer class="w-full px-5 py-7 text-center bg-[#0d2a47]">
+  <footer class="w-full px-5 py-7 text-center bg-[#0d2a47] text-white">
    <p class="font-bold text-[#dff4ff]">© 2026 SDN Balunglor 04 • Tumbuh Ceria, Raih Cita-cita</p>
   </footer>
  </div>
