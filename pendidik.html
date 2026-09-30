@@ -1,2 +1,154 @@
-<h1>Halaman ini masih kosong</h1>
-<p>Segera diisi.</p>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendidik & Staf - SDN Balunglor 04</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
+    body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
+    h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
+    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; }
+    @media (max-width: 767px) { .desktop-nav { display: none; } }
+    @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+</head>
+<body>
+ <div class="school-shell">
+  <!-- NAVIGASI UTAMA -->
+  <header class="w-full px-5 pt-5 md:px-10 md:pt-7 sticky top-4 z-50">
+   <nav class="mx-auto flex max-w-6xl items-center justify-between rounded-[1.7rem] bg-white px-5 py-3 shadow-[0_10px_25px_rgba(18,54,90,0.08)] border border-sky-100">
+    <a href="index.html" class="flex items-center gap-3">
+     <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-yellow-300 text-2xl shadow-sm">✦</span>
+     <span>
+      <strong class="brand-font block leading-none text-[#12365a] text-base">SDN Balunglor 04</strong>
+      <span class="mt-1 block text-xs font-bold tracking-wide text-[#ff6b5e]">Belajar • Bertumbuh • Berprestasi</span>
+     </span>
+    </a>
+    <div class="desktop-nav hidden md:flex items-center gap-4 text-sm font-extrabold text-[#12365a]">
+     <a href="index.html" class="hover:text-[#ff6b5e] px-2 py-2">Beranda</a>
+     <div class="relative group">
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">Profil Kami <i data-lucide="chevron-down" width="16" height="16"></i></button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-52 border border-sky-100">
+       <a href="profil.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Sambutan Kepala Sekolah</a>
+      </div>
+     </div>
+     <div class="relative group">
+      <button class="flex items-center gap-1 text-[#ff6b5e] px-2 py-2">Pendidik & Staf <i data-lucide="chevron-down" width="16" height="16"></i></button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
+       <a href="pendidik.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Dewan Guru & Staf</a>
+      </div>
+     </div>
+     <a href="artikel.html" class="hover:text-[#ff6b5e] px-2 py-2">Berita</a>
+     <a href="galeri.html" class="hover:text-[#ff6b5e] px-2 py-2">Galeri</a>
+     <div class="relative group">
+      <button class="flex items-center gap-1 hover:text-[#ff6b5e] px-2 py-2">Lainnya <i data-lucide="chevron-down" width="16" height="16"></i></button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-xl rounded-2xl p-2 w-48 border border-sky-100">
+       <a href="kontak.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Buku Tamu</a>
+       <a href="kontak.html#pengaduan" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Kotak Pengaduan</a>
+       <a href="kontak.html" class="block px-3 py-2 rounded-xl hover:bg-sky-50 text-xs font-bold text-[#12365a]">Kontak & Medsos</a>
+      </div>
+     </div>
+    </div>
+    <div class="hidden md:flex items-center gap-3">
+     <button onclick="alert('Fitur pencarian aktif!')" class="p-2 text-[#12365a] hover:bg-sky-50 rounded-full transition"><i data-lucide="search" width="20" height="20"></i></button>
+     <a href="#" onclick="alert('Tunggu pendaftaran SPMB 2027!'); return false;" class="rounded-full bg-[#12365a] text-white px-5 py-2.5 text-xs font-extrabold shadow-md hover:bg-[#1a4a75] transition">SPMB 2027</a>
+    </div>
+    <button id="menu-button" type="button" class="mobile-toggle md:hidden rounded-xl p-2 text-[#12365a]"><i data-lucide="menu" width="26" height="26"></i></button>
+   </nav>
+   <div id="mobile-menu" class="mobile-nav mx-auto mt-2 max-w-6xl hidden flex-col gap-1 rounded-2xl bg-white p-4 text-center font-extrabold shadow-lg border border-sky-100">
+    <a href="index.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Beranda</a>
+    <a href="profil.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Sambutan Kepala Sekolah</a>
+    <a href="pendidik.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#ff6b5e]">Pendidik & Staf</a>
+    <a href="artikel.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Berita Sekolah</a>
+    <a href="galeri.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Galeri & Video</a>
+    <a href="kontak.html" class="rounded-xl px-4 py-2 hover:bg-sky-50 text-[#12365a]">Buku Tamu & Pengaduan</a>
+    <a href="#" onclick="alert('Tunggu pendaftaran SPMB 2027!'); return false;" class="rounded-xl px-3 py-2 mt-2 bg-[#12365a] text-white">SPMB 2027</a>
+   </div>
+  </header>
+
+  <main class="px-5 py-12 md:px-10 md:py-16">
+   <div class="mx-auto max-w-6xl">
+    <div class="max-w-2xl mb-10">
+     <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#dff4ff] text-[#12365a]">Orang-Orang Hebat Kami</div>
+     <h2 class="brand-font mt-4 text-3xl md:text-4xl font-bold text-[#12365a]">Pendidik & Tenaga Kependidikan</h2>
+     <p class="mt-2 text-sm font-semibold text-[#315675]">Dewan guru dan tenaga administrasi yang berdedikasi mendampingi siswa-siswi SDN Balunglor 04.</p>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="Foto-Kepala-Sekolah.jpg" alt="Kepala Sekolah">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Kepala Sekolah</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Tri Nurul Rajab, S.Pd., M.Pd.</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-VIKE.png" alt="Vike">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 1A</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Vike Suwantini</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-AGUSTIN.jpg" alt="Agustin">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 1B</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Agustin Maratus S.</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-ARIE.jpg" alt="Arie">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 2A</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Arie Yuniarsasi</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-DANANG.jpg" alt="Danang">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 2B</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Danang Satriyo P.</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-LIA.png" alt="Lia">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 3</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Lia Isnany</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-CAHYO.png" alt="Cahyo">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 4</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Cahyo Hadi</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-AHMAD.jpg" alt="Ahmad">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 5</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Ahamad Hamdani</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-NINIS.png" alt="Ninis">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Kelas 6</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Ninis Rusiati</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-DIDI.jpg" alt="Didi">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Guru Agama</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Didi Ainurrasyid</p>
+     </article>
+     <article class="rounded-[1.7rem] bg-white p-4 text-center shadow-sm border border-sky-100">
+      <img class="h-44 w-full rounded-[1.2rem] object-cover" src="FOTO-KHOLIDAH.jpg" alt="Kholidah">
+      <h3 class="brand-font mt-4 text-lg font-bold text-[#12365a]">Tenaga Administrasi</h3>
+      <p class="mt-1 text-sm font-semibold text-[#315675]">Farihatul Kholidah</p>
+     </article>
+    </div>
+   </div>
+  </main>
+
+  <footer class="w-full px-5 py-7 text-center bg-[#0d2a47] text-white">
+   <p class="font-bold text-[#dff4ff]">© 2026 SDN Balunglor 04 • Tumbuh Ceria, Raih Cita-cita</p>
+  </footer>
+ </div>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+   lucide.createIcons();
+   const btn = document.getElementById("menu-button");
+   const menu = document.getElementById("mobile-menu");
+   btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  });
+ </script>
+</body>
+</html>
