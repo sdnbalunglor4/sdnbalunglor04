@@ -10,8 +10,8 @@
     body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
     h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
     .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; background-image: radial-gradient(circle at 5% 13%, rgba(255, 201, 40, .18) 0 38px, transparent 39px), radial-gradient(circle at 95% 85%, rgba(223, 244, 255, .7) 0 50px, transparent 51px); }
-    .activity-card, .quick-card { transition: transform .25s ease, box-shadow .25s ease; }
-    .activity-card:hover, .quick-card:hover { transform: translateY(-7px); box-shadow: 0 18px 30px rgba(18, 54, 90, .13); }
+    .activity-card, .quick-card, .extra-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .activity-card:hover, .quick-card:hover, .extra-card:hover { transform: translateY(-7px); box-shadow: 0 18px 30px rgba(18, 54, 90, .13); }
     @media (max-width: 767px) { .desktop-nav { display: none; } }
     @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
   </style>
@@ -73,17 +73,13 @@
   </header>
 
   <main>
-   <!-- HERO SECTION -->
+   <!-- HERO SECTION (Tanpa Tombol Sambutan & Pengaduan di Bawah Teks) -->
    <section class="relative overflow-hidden px-5 pb-20 pt-12 md:px-10 md:pb-24 md:pt-16">
     <div class="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
      <div>
       <div class="mb-5 inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#d9f5df] text-[#17613a]">Sekolah Dasar yang Ceria & Berprestasi</div>
       <h1 class="brand-font max-w-xl text-[2.8rem] font-bold leading-[1.03] text-[#12365a] md:text-[4.3rem]">Tempat kecil untuk mimpi-mimpi besar.</h1>
       <p class="mt-6 max-w-xl text-lg font-semibold leading-relaxed text-[#315675] md:text-xl">Selamat datang di SDN Balunglor 04. Bersama kami, setiap anak belajar dengan gembira, percaya diri, dan penuh rasa ingin tahu.</p>
-      <div class="mt-8 flex flex-wrap gap-4">
-       <a href="profil.html" class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-extrabold bg-[#ff6b5e] text-white shadow-md transition hover:-translate-y-1"><span>Sambutan Kepala Sekolah</span><i data-lucide="arrow-right" width="19" height="19"></i></a>
-       <a href="kontak.html#pengaduan" class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-extrabold bg-white text-[#12365a] border-2 border-sky-200 shadow-sm transition hover:bg-sky-50"><span>💬 Layanan Pengaduan</span></a>
-      </div>
      </div>
      <div class="relative mx-auto w-full max-w-lg">
       <div class="overflow-hidden rounded-[2.8rem] border-[10px] border-white bg-white shadow-lg">
@@ -94,7 +90,7 @@
     </div>
    </section>
 
-   <!-- STATISTIK SEKOLAH (DIPERBARUI 230 SISWA) -->
+   <!-- STATISTIK SEKOLAH (230 SISWA) -->
    <section class="w-full px-5 pb-16 md:px-10">
     <div class="mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
      <div class="rounded-3xl bg-white p-6 shadow-sm border border-sky-100">
@@ -162,8 +158,61 @@
     </div>
    </section>
 
+   <!-- BAGIAN EKSTRAKURIKULER (Drumband, Pramuka, Tari, Menggambar & Mewarnai) -->
+   <section class="w-full px-5 py-16 md:px-10 bg-white border-y border-sky-100">
+    <div class="mx-auto max-w-6xl">
+     <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="inline-block rounded-full bg-[#dff4ff] px-4 py-2 text-sm font-extrabold text-[#12365a]">Bakat & Minat Siswa</span>
+      <h2 class="brand-font mt-4 text-3xl md:text-5xl font-bold text-[#12365a]">Kegiatan Ekstrakurikuler</h2>
+      <p class="mt-3 text-base md:text-lg font-semibold text-[#315675]">Wadah pengembangan bakat, kreativitas, dan karakter positif peserta didik SDN Balunglor 04.</p>
+     </div>
+     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Drumband -->
+      <article class="extra-card rounded-[2rem] bg-[#fffdf7] p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div class="overflow-hidden rounded-2xl mb-4 h-44 bg-sky-50">
+        <img src="FOTO-DRUMBAND.jpg" alt="Drumband" class="w-full h-full object-cover">
+       </div>
+       <div>
+        <h3 class="brand-font text-xl font-bold text-[#12365a]">🥁 Drumband</h3>
+        <p class="mt-2 text-sm font-semibold text-[#315675]">Melatih kedisiplinan, kekompakan, dan seni bermusik bersama tim.</p>
+       </div>
+      </article>
+      <!-- Pramuka -->
+      <article class="extra-card rounded-[2rem] bg-[#fffdf7] p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div class="overflow-hidden rounded-2xl mb-4 h-44 bg-sky-50">
+        <img src="FOTO-JUARA-PRAMUKA.jpeg" alt="Pramuka" class="w-full h-full object-cover">
+       </div>
+       <div>
+        <h3 class="brand-font text-xl font-bold text-[#12365a]">🏕️ Pramuka</h3>
+        <p class="mt-2 text-sm font-semibold text-[#315675]">Membentuk kemandirian, kepemimpinan, dan jiwa sosial yang tinggi.</p>
+       </div>
+      </article>
+      <!-- Tari -->
+      <article class="extra-card rounded-[2rem] bg-[#fffdf7] p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div class="overflow-hidden rounded-2xl mb-4 h-44 bg-sky-50">
+        <img src="FOTO-JUARA-TARI.jpeg" alt="Seni Tari" class="w-full h-full object-cover">
+       </div>
+       <div>
+        <h3 class="brand-font text-xl font-bold text-[#12365a]">💃 Seni Tari</h3>
+        <p class="mt-2 text-sm font-semibold text-[#315675]">Melestarikan budaya bangsa melalui gerak tari tradisional yang indah.</p>
+       </div>
+      </article>
+      <!-- Menggambar & Mewarnai -->
+      <article class="extra-card rounded-[2rem] bg-[#fffdf7] p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div class="overflow-hidden rounded-2xl mb-4 h-44 bg-sky-50">
+        <img src="FOTO-MENGGAMBAR.jpg" alt="Menggambar & Mewarnai" class="w-full h-full object-cover">
+       </div>
+       <div>
+        <h3 class="brand-font text-xl font-bold text-[#12365a]">🎨 Menggambar & Mewarnai</h3>
+        <p class="mt-2 text-sm font-semibold text-[#315675]">Menyalurkan imajinasi dan kreativitas visual anak dalam goresan warna.</p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+
    <!-- AKSES CEPAT (TERMASUK KOTAK PENGADUAN) -->
-   <section class="w-full px-5 py-12 md:px-10 bg-sky-50/70 border-y border-sky-100">
+   <section class="w-full px-5 py-12 md:px-10 bg-sky-50/70">
     <div class="mx-auto max-w-6xl">
      <div class="text-center max-w-xl mx-auto mb-10">
       <span class="inline-block rounded-full bg-yellow-200 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">NAVIGASI PINTAS</span>
