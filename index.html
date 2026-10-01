@@ -9,9 +9,9 @@
     :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
     body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
     h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
-    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; background-image: radial-gradient(circle at 5% 13%, rgba(255, 201, 40, .18) 0 38px, transparent 39px); }
-    .activity-card { transition: transform .25s ease, box-shadow .25s ease; }
-    .activity-card:hover { transform: translateY(-7px); box-shadow: 0 18px 30px rgba(18, 54, 90, .13); }
+    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; background-image: radial-gradient(circle at 5% 13%, rgba(255, 201, 40, .18) 0 38px, transparent 39px), radial-gradient(circle at 95% 85%, rgba(223, 244, 255, .7) 0 50px, transparent 51px); }
+    .activity-card, .quick-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .activity-card:hover, .quick-card:hover { transform: translateY(-7px); box-shadow: 0 18px 30px rgba(18, 54, 90, .13); }
     @media (max-width: 767px) { .desktop-nav { display: none; } }
     @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
   </style>
@@ -73,13 +73,17 @@
   </header>
 
   <main>
-   <section class="relative overflow-hidden px-5 pb-24 pt-12 md:px-10 md:pb-28 md:pt-16">
+   <!-- HERO SECTION -->
+   <section class="relative overflow-hidden px-5 pb-20 pt-12 md:px-10 md:pb-24 md:pt-16">
     <div class="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
      <div>
-      <div class="mb-5 inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#d9f5df] text-[#17613a]">Sekolah Dasar yang Ceria</div>
+      <div class="mb-5 inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#d9f5df] text-[#17613a]">Sekolah Dasar yang Ceria & Berprestasi</div>
       <h1 class="brand-font max-w-xl text-[2.8rem] font-bold leading-[1.03] text-[#12365a] md:text-[4.3rem]">Tempat kecil untuk mimpi-mimpi besar.</h1>
       <p class="mt-6 max-w-xl text-lg font-semibold leading-relaxed text-[#315675] md:text-xl">Selamat datang di SDN Balunglor 04. Bersama kami, setiap anak belajar dengan gembira, percaya diri, dan penuh rasa ingin tahu.</p>
-      <a href="profil.html" class="mt-8 inline-flex items-center gap-2 rounded-full px-6 py-4 font-extrabold bg-[#ff6b5e] text-white shadow-md transition hover:-translate-y-1"><span>Sambutan Kepala Sekolah</span><i data-lucide="arrow-right" width="19" height="19"></i></a>
+      <div class="mt-8 flex flex-wrap gap-4">
+       <a href="profil.html" class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-extrabold bg-[#ff6b5e] text-white shadow-md transition hover:-translate-y-1"><span>Sambutan Kepala Sekolah</span><i data-lucide="arrow-right" width="19" height="19"></i></a>
+       <a href="kontak.html#pengaduan" class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-extrabold bg-white text-[#12365a] border-2 border-sky-200 shadow-sm transition hover:bg-sky-50"><span>💬 Layanan Pengaduan</span></a>
+      </div>
      </div>
      <div class="relative mx-auto w-full max-w-lg">
       <div class="overflow-hidden rounded-[2.8rem] border-[10px] border-white bg-white shadow-lg">
@@ -90,28 +94,103 @@
     </div>
    </section>
 
-   <section class="w-full bg-[#dff4ff] px-5 py-16 md:px-10 md:py-20">
+   <!-- STATISTIK SEKOLAH (DIPERBARUI 230 SISWA) -->
+   <section class="w-full px-5 pb-16 md:px-10">
+    <div class="mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+     <div class="rounded-3xl bg-white p-6 shadow-sm border border-sky-100">
+      <span class="text-3xl md:text-4xl brand-font font-bold text-[#ff6b5e]">230</span>
+      <p class="mt-1 text-xs md:text-sm font-extrabold text-[#12365a]">Peserta Didik Aktif</p>
+     </div>
+     <div class="rounded-3xl bg-white p-6 shadow-sm border border-sky-100">
+      <span class="text-3xl md:text-4xl brand-font font-bold text-[#12365a]">11</span>
+      <p class="mt-1 text-xs md:text-sm font-extrabold text-[#12365a]">Pendidik & Tenaga Staf</p>
+     </div>
+     <div class="rounded-3xl bg-white p-6 shadow-sm border border-sky-100">
+      <span class="text-3xl md:text-4xl brand-font font-bold text-emerald-600">25+</span>
+      <p class="mt-1 text-xs md:text-sm font-extrabold text-[#12365a]">Prestasi & Penghargaan</p>
+     </div>
+     <div class="rounded-3xl bg-white p-6 shadow-sm border border-sky-100">
+      <span class="text-3xl md:text-4xl brand-font font-bold text-yellow-500">100%</span>
+      <p class="mt-1 text-xs md:text-sm font-extrabold text-[#12365a]">Semangat & Ceria</p>
+     </div>
+    </div>
+   </section>
+
+   <!-- SEKILAS SAMBUTAN KEPALA SEKOLAH -->
+   <section class="w-full px-5 py-12 md:px-10 bg-[#dff4ff]/50">
+    <div class="mx-auto max-w-6xl rounded-[2.5rem] bg-white p-8 md:p-12 shadow-sm border border-sky-100 grid md:grid-cols-[auto_1fr] gap-8 items-center">
+     <div class="flex justify-center">
+      <div class="p-2 rounded-full bg-yellow-300 shadow-md">
+       <img src="Foto-Kepala-Sekolah.jpg" alt="Tri Nurul Rajab" class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover">
+      </div>
+     </div>
+     <div>
+      <span class="inline-block rounded-full bg-yellow-100 px-3 py-1 text-xs font-extrabold text-[#12365a] mb-2">SAMBUTAN KEPALA SEKOLAH</span>
+      <h2 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">“Mewujudkan Generasi NGENCLIING yang Berkarakter & Berprestasi”</h2>
+      <p class="mt-3 text-sm md:text-base font-semibold text-[#315675] leading-relaxed">Selamat datang di portal resmi SDN Balunglor 04. Kami berkomitmen memberikan pendidikan mendalam berbasis ekosistem digital dan religius.</p>
+      <div class="mt-5">
+       <a href="profil.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#ff6b5e] hover:underline">Baca Sambutan Lengkap & Visi Misi →</a>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- KEGIATAN FAVORIT -->
+   <section class="w-full px-5 py-16 md:px-10 md:py-20">
     <div class="mx-auto max-w-6xl">
      <div class="max-w-2xl">
-      <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-white text-[#ff6b5e]">Ruang untuk Berkarya</div>
+      <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#ffe8e5] text-[#ff6b5e]">Ruang untuk Berkarya</div>
       <h2 class="brand-font mt-4 text-4xl font-bold leading-tight text-[#12365a] md:text-5xl">Kegiatan favorit di sekolah kami</h2>
      </div>
      <div class="mt-10 grid gap-6 md:grid-cols-3">
-      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm">
+      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm border border-sky-100">
        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-300 text-3xl">📚</div>
        <h3 class="brand-font text-2xl font-bold text-[#12365a]">Literasi Ceria</h3>
        <p class="mt-3 font-semibold leading-relaxed text-[#315675]">Membaca, bercerita, dan menulis untuk membuka jendela pengetahuan setiap hari.</p>
       </article>
-      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm">
+      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm border border-sky-100">
        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ffb7ae] text-3xl">⚽</div>
        <h3 class="brand-font text-2xl font-bold text-[#12365a]">Olahraga & Sehat</h3>
        <p class="mt-3 font-semibold leading-relaxed text-[#315675]">Bergerak aktif, bermain sportif, dan menjaga tubuh tetap sehat bersama teman.</p>
       </article>
-      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm">
+      <article class="activity-card rounded-[2rem] p-7 bg-white shadow-sm border border-sky-100">
        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#c9efd3] text-3xl">🎨</div>
        <h3 class="brand-font text-2xl font-bold text-[#12365a]">Seni & Kreativitas</h3>
        <p class="mt-3 font-semibold leading-relaxed text-[#315675]">Menggambar, membuat karya, dan mengekspresikan ide dengan penuh warna.</p>
       </article>
+     </div>
+    </div>
+   </section>
+
+   <!-- AKSES CEPAT (TERMASUK KOTAK PENGADUAN) -->
+   <section class="w-full px-5 py-12 md:px-10 bg-sky-50/70 border-y border-sky-100">
+    <div class="mx-auto max-w-6xl">
+     <div class="text-center max-w-xl mx-auto mb-10">
+      <span class="inline-block rounded-full bg-yellow-200 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-2">NAVIGASI PINTAS</span>
+      <h2 class="brand-font text-3xl font-bold text-[#12365a]">Akses Cepat Layanan Sekolah</h2>
+      <p class="text-sm font-semibold text-[#315675] mt-1">Temukan informasi dan layanan yang Anda butuhkan dengan cepat.</p>
+     </div>
+     <div class="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
+      <a href="pendidik.html" class="quick-card rounded-2xl bg-white p-6 shadow-sm border border-sky-100 text-center block">
+       <span class="text-3xl block mb-2">👩‍🏫</span>
+       <h3 class="brand-font text-lg font-bold text-[#12365a]">Pendidik & Staf</h3>
+       <p class="mt-1 text-xs font-semibold text-[#315675]">Lihat profil dewan guru</p>
+      </a>
+      <a href="galeri.html" class="quick-card rounded-2xl bg-white p-6 shadow-sm border border-sky-100 text-center block">
+       <span class="text-3xl block mb-2">📸</span>
+       <h3 class="brand-font text-lg font-bold text-[#12365a]">Galeri & Video</h3>
+       <p class="mt-1 text-xs font-semibold text-[#315675]">Foto kegiatan & YouTube</p>
+      </a>
+      <a href="artikel.html" class="quick-card rounded-2xl bg-white p-6 shadow-sm border border-sky-100 text-center block">
+       <span class="text-3xl block mb-2">📰</span>
+       <h3 class="brand-font text-lg font-bold text-[#12365a]">Berita Sekolah</h3>
+       <p class="mt-1 text-xs font-semibold text-[#315675]">Warta & info kesehatan</p>
+      </a>
+      <a href="kontak.html#pengaduan" class="quick-card rounded-2xl bg-yellow-50 p-6 shadow-sm border-2 border-yellow-300 text-center block">
+       <span class="text-3xl block mb-2">💬</span>
+       <h3 class="brand-font text-lg font-bold text-[#12365a]">Kotak Pengaduan</h3>
+       <p class="mt-1 text-xs font-extrabold text-[#ff6b5e]">Kirim saran & masukan</p>
+      </a>
      </div>
     </div>
    </section>
