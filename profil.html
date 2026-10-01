@@ -9,7 +9,7 @@
     :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
     body { font-family: "Nunito", sans-serif; color: var(--navy); background: #fffdf7; overflow-x: hidden; }
     h1, h2, h3, .brand-font { font-family: "Fredoka", sans-serif; }
-    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; }
+    .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; background-image: radial-gradient(circle at 10% 20%, rgba(255, 201, 40, .15) 0, transparent 40px), radial-gradient(circle at 90% 80%, rgba(223, 244, 255, .6) 0, transparent 60px); }
     @media (max-width: 767px) { .desktop-nav { display: none; } }
     @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
   </style>
@@ -71,13 +71,26 @@
   </header>
 
   <main class="px-5 py-12 md:px-10 md:py-16">
-   <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-white p-6 md:p-12 shadow-[0_10px_30px_rgba(18,54,90,0.06)] border border-sky-100">
-    <div class="text-center mb-8">
-     <span class="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-3">SAMBUTAN KEPALA SEKOLAH • 01 OKTOBER 2026</span>
-     <h3 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">Menuju Sekolah NGENCLIING melalui Pembelajaran Mendalam Berbasis Ekosistem Digital dan Religius</h3>
+   <!-- KOTAK SAMBUTAN DENGAN BACKGROUND CERIA & FOTO KEPALA SEKOLAH -->
+   <div class="mx-auto max-w-4xl rounded-[2.8rem] bg-gradient-to-b from-white via-[#f4fbff] to-[#fffde8] p-6 md:p-12 shadow-[0_15px_35px_rgba(18,54,90,0.08)] border-4 border-yellow-200">
+    
+    <!-- Header Sambutan & Foto Kepala Sekolah -->
+    <div class="text-center mb-10">
+     <span class="inline-block rounded-full bg-yellow-300 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-4 shadow-xs">✨ SAMBUTAN KEPALA SEKOLAH • 01 OKTOBER 2026 ✨</span>
+     
+     <!-- Foto Kepala Sekolah -->
+     <div class="my-6 flex justify-center">
+      <div class="relative p-2 rounded-full bg-white shadow-md border-4 border-[#ff6b5e]">
+       <img src="Foto-Kepala-Sekolah.jpg" alt="Tri Nurul Rajab, S.Pd., M.Pd." class="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover">
+      </div>
+     </div>
+
+     <h3 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a] leading-snug">Menuju Sekolah NGENCLIING melalui Pembelajaran Mendalam Berbasis Ekosistem Digital dan Religius</h3>
+     <p class="mt-2 text-sm font-extrabold text-[#ff6b5e]">Bapak Tri Nurul Rajab, S.Pd., M.Pd.</p>
     </div>
 
-    <div class="space-y-4 text-[#315675] font-semibold text-base md:text-lg leading-relaxed text-justify">
+    <!-- Isi Sambutan Lengkap -->
+    <div class="space-y-4 text-[#315675] font-semibold text-base md:text-lg leading-relaxed text-justify bg-white/70 p-6 md:p-8 rounded-3xl border border-sky-100 shadow-inner">
      <p>Assalamu’alaikum warahmatullahi wabarakatuh.</p>
      <p>Salam sejahtera, Salam pendidikan, dan salam penuh semangat untuk kita semua.</p>
      <p>Yang saya hormati Bapak/Ibu Guru dan Tenaga Kependidikan, yang saya banggakan para peserta didik, serta seluruh keluarga besar SDN Balunglor 04 yang saya cintai.</p>
@@ -146,25 +159,14 @@
      </div>
     </div>
 
-    <!-- Tanda Tangan & Stempel Resmi Persis Lampiran Gambar -->
-    <div class="mt-12 flex flex-col sm:flex-row justify-between items-end border-t border-sky-100 pt-8">
+    <!-- Tanda Tangan Menggunakan Gambar Resmi (TTD-PAK-RAJAB.png) -->
+    <div class="mt-12 flex flex-col sm:flex-row justify-between items-end border-t border-sky-200 pt-8">
      <div></div>
-     <div class="text-center sm:text-right relative w-full sm:w-[320px]">
-      <p class="text-sm font-semibold text-[#315675]">Jember, 01 Oktober 2026</p>
-      <p class="text-sm font-bold text-[#12365a] mt-0.5">Kepala SDN Balunglor 04</p>
-      <p class="text-sm font-bold text-[#12365a]">Kecamatan Balung</p>
-      
-      <div class="relative my-2 h-20">
-        <img src="ttd-stempel.png" alt="Stempel dan Tanda Tangan" class="absolute left-[-20px] top-[-25px] w-56 h-auto object-contain z-10 opacity-95 mix-blend-multiply pointer-events-none">
-      </div>
-
-      <div class="relative z-20">
-        <p class="text-base font-extrabold text-[#12365a] bg-white/80 px-1 inline-block">Tri Nurul Rajab, S.Pd, M.Pd.</p>
-        <p class="text-sm font-bold text-[#315675] bg-white/80 px-1 inline-block mt-0.5">Penata Tk. I, III/d</p>
-        <p class="text-xs font-bold text-[#315675] tracking-wider bg-white/80 px-1 block mt-0.5">NIP 198404262010011015</p>
-      </div>
+     <div class="text-center sm:text-right relative w-full sm:w-[340px]">
+      <img src="TTD-PAK-RAJAB.png" alt="Tanda Tangan dan Stempel Kepala Sekolah" class="w-full h-auto object-contain mx-auto sm:ml-auto">
      </div>
     </div>
+
    </div>
   </main>
 
