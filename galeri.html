@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeri Foto & Video - SDN Balunglor 04</title>
+  <title>Galeri Album Foto & Video - SDN Balunglor 04</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
     :root { --navy: #12365a; --sky: #dff4ff; --yellow: #ffc928; --coral: #ff6b5e; }
@@ -12,6 +12,8 @@
     .school-shell { width: 100%; min-height: 100%; background-color: #fffdf7; }
     .gallery-tile img { transition: transform .45s ease; }
     .gallery-tile:hover img { transform: scale(1.07); }
+    .album-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .album-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(18, 54, 90, 0.12); }
     @media (max-width: 767px) { .desktop-nav { display: none; } }
     @media (min-width: 768px) { .mobile-toggle, .mobile-nav { display: none !important; } }
   </style>
@@ -72,132 +74,180 @@
    </div>
   </header>
 
-  <main class="px-5 py-12 md:px-10 md:py-16 space-y-16">
+  <main class="px-5 py-12 md:px-10 md:py-16 space-y-20">
    <div class="mx-auto max-w-6xl">
     
-    <!-- 1. GALERI FOTO PRESTASI SISWA -->
-    <div>
-     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8">
-      <div>
-       <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-yellow-300 text-[#12365a]">Bangga atas Pencapaian</div>
-       <h2 class="brand-font mt-4 text-3xl md:text-4xl font-bold text-[#12365a]">Galeri Foto Prestasi Siswa</h2>
-      </div>
-      <p class="max-w-md font-semibold leading-relaxed text-[#315675] md:text-right">Mengabadikan semangat, kerja keras, dan prestasi membanggakan siswa-siswi SDN Balunglor 04.</p>
-     </div>
-     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-JUARA-PRAMUKA.jpeg" alt="Pramuka"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🏕️ Prestasi Pramuka</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">Prestasi</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">35</span> Suka</button>
-       </div>
-      </figure>
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-JUARA-RENANG.jpeg" alt="Menyanyi"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🎤 Juara 1 Menyanyi Solo</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">FLS3N 2026</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">56</span> Suka</button>
-       </div>
-      </figure>
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-JUARA-TARI.jpeg" alt="Tari"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">💃 Juara 2 Seni Tari</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">FLS3N 2026</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">48</span> Suka</button>
-       </div>
-      </figure>
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-JUARA-MENYANYI.jpeg" alt="Renang"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🏊 Juara Harapan 2 Renang</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">O2SN 2026</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">29</span> Suka</button>
-       </div>
-      </figure>
-     </div>
+    <!-- HEADER GALERI -->
+    <div class="text-center max-w-2xl mx-auto mb-14">
+     <span class="inline-block rounded-full bg-yellow-100 px-4 py-1.5 text-xs font-extrabold text-[#12365a] mb-3">DOKUMENTASI SEKOLAH</span>
+     <h1 class="brand-font text-3xl md:text-5xl font-bold text-[#12365a]">Album Galeri Foto & Video</h1>
+     <p class="mt-3 text-base md:text-lg font-semibold text-[#315675]">Kumpulan album dokumentasi prestasi, cerita seru, dan ragam kegiatan siswa-siswi SDN Balunglor 04.</p>
     </div>
 
-    <!-- 2. GALERI FOTO CERITA SERU DARI SEKOLAH -->
-    <div class="mt-16">
-     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8">
+    <!-- 1. ALBUM GALERI FOTO PRESTASI SISWA -->
+    <section class="mb-16">
+     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8 border-b border-sky-100 pb-4">
       <div>
-       <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-[#ffede3] text-[#d74e43]">Momen Seru</div>
-       <h2 class="brand-font mt-4 text-3xl md:text-4xl font-bold text-[#12365a]">Galeri Foto Cerita Seru dari Sekolah</h2>
+       <span class="inline-block text-xs font-extrabold text-[#ff6b5e] uppercase tracking-wider mb-1">Kategori Prestasi</span>
+       <h2 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">🏆 Album Galeri Prestasi Siswa</h2>
       </div>
-      <p class="max-w-md font-semibold leading-relaxed text-[#315675] md:text-right">Setiap hari adalah kesempatan baru untuk belajar, tertawa, dan membuat kenangan baik bersama.</p>
+      <p class="text-sm font-semibold text-[#315675]">Kumpulan foto piala, kejuaraan, dan pencapaian membanggakan siswa.</p>
      </div>
      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-BERKEBUN.jpg" alt="Berkebun"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🌱 Belajar & Berkebun</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">24</span> Suka</button>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-JUARA-PRAMUKA.jpeg" alt="Prestasi Pramuka">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🏕️ Juara Lomba Pramuka</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Prestasi</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">35</span></button>
        </div>
       </figure>
-      <!-- Diperbarui: Nonton Bioskop Bersama -->
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="nonton.jpg" alt="nonton"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🎬 Nonton Bioskop Edukasi</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">Rekreasi Edukatif</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">38</span> Suka</button>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-JUARA-RENANG.jpeg" alt="Menyanyi Solo">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🎤 Juara 1 Menyanyi Solo</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Prestasi</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">56</span></button>
        </div>
       </figure>
-      <!-- Diperbarui: Field Trip ke Kebun Binatang -->
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="kebun-binatang.jpg" alt="kebun binatang"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">🦁 Kunjungan ke Kebun Binatang</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">Belajar Alam</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">45</span> Suka</button>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-JUARA-TARI.jpeg" alt="Seni Tari">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">💃 Juara 2 Seni Tari</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Prestasi</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">48</span></button>
        </div>
       </figure>
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm flex flex-col justify-between border border-sky-100">
-       <div><img class="h-48 w-full object-cover" src="FOTO-DALAM-PERPUSTAKAAN.jpg" alt="Perpus"><figcaption class="px-4 pt-3 text-sm font-extrabold text-[#12365a]">📚 Ruang Perpustakaan</figcaption></div>
-       <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
-        <span class="text-xs font-bold text-gray-400">Momen Sekolah</span>
-        <button onclick="likePhoto(this)" class="flex items-center gap-1.5 rounded-full bg-pink-50 px-3 py-1.5 text-xs font-extrabold text-pink-600 transition hover:bg-pink-100">❤️ <span class="like-count">19</span> Suka</button>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-JUARA-MENYANYI.jpeg" alt="Renang">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🏊 Juara Harapan 2 Renang</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Prestasi</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">29</span></button>
        </div>
       </figure>
      </div>
-    </div>
+    </section>
 
-    <!-- 3. GALERI FOTO KEGIATAN SEKOLAH -->
-    <div class="mt-16">
-     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8">
+    <!-- 2. ALBUM GALERI FOTO CERITA SERU DARI SEKOLAH -->
+    <section class="mb-16">
+     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8 border-b border-sky-100 pb-4">
       <div>
-       <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-sky-200 text-[#12365a]">Aktivitas Sekolah</div>
-       <h2 class="brand-font mt-4 text-3xl md:text-4xl font-bold text-[#12365a]">Galeri Foto Kegiatan Sekolah</h2>
+       <span class="inline-block text-xs font-extrabold text-emerald-600 uppercase tracking-wider mb-1">Kategori Cerita Seru</span>
+       <h2 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">✨ Album Galeri Cerita Seru dari Sekolah</h2>
       </div>
-      <p class="max-w-md font-semibold leading-relaxed text-[#315675] md:text-right">Dokumentasi ragam aktivitas dan program pembelajaran di SDN Balunglor 04.</p>
+      <p class="text-sm font-semibold text-[#315675]">Momen kebersamaan, rekreasi edukatif, dan keceriaan siswa sehari-hari.</p>
+     </div>
+     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-BERKEBUN.jpg" alt="Berkebun">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🌱 Belajar & Berkebun</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Cerita</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">24</span></button>
+       </div>
+      </figure>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-BIOSKOP.jpg" alt="Nonton Bioskop">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🎬 Nonton Bioskop Edukasi</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Cerita</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">38</span></button>
+       </div>
+      </figure>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-KEBUN-BINATANG.jpg" alt="Kebun Binatang">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">🦁 Kunjungan ke Kebun Binatang</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Cerita</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">45</span></button>
+       </div>
+      </figure>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white p-3 shadow-sm border border-sky-100 flex flex-col justify-between">
+       <div>
+        <div class="overflow-hidden rounded-2xl h-48 bg-sky-50">
+         <img class="w-full h-full object-cover" src="FOTO-DALAM-PERPUSTAKAAN.jpg" alt="Perpus">
+        </div>
+        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">📚 Ruang Perpustakaan</figcaption>
+       </div>
+       <div class="px-2 pt-2 flex items-center justify-between border-t border-gray-100 mt-3">
+        <span class="text-xs font-bold text-gray-400">Album Cerita</span>
+        <button onclick="likePhoto(this)" class="flex items-center gap-1 rounded-full bg-pink-50 px-3 py-1 text-xs font-extrabold text-pink-600 hover:bg-pink-100 transition">❤️ <span class="like-count">19</span></button>
+       </div>
+      </figure>
+     </div>
+    </section>
+
+    <!-- 3. ALBUM GALERI FOTO KEGIATAN SEKOLAH -->
+    <section class="mb-16">
+     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8 border-b border-sky-100 pb-4">
+      <div>
+       <span class="inline-block text-xs font-extrabold text-[#12365a] uppercase tracking-wider mb-1">Kategori Aktivitas</span>
+       <h2 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">🏫 Album Galeri Kegiatan Sekolah</h2>
+      </div>
+      <p class="text-sm font-semibold text-[#315675]">Dokumentasi program belajar, praktek keterampilan, dan aktivitas harian sekolah.</p>
      </div>
      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <!-- Diperbarui: Melipat Baju -->
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
-       <img class="h-56 w-full object-cover rounded-xl" src="belajar-melipat.jpg" alt="belajar melipat">
-       <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">👔 Praktek Mandiri Melipat Baju</figcaption>
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
+       <div class="overflow-hidden rounded-xl h-56 bg-sky-50">
+        <img class="w-full h-full object-cover" src="FOTO-MENYETRIKA-BAJU.jpg" alt="Menyetrika Baju">
+       </div>
+       <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">👔 Praktek Mandiri Menyetrika Baju</figcaption>
       </figure>
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
-       <img class="h-56 w-full object-cover rounded-xl" src="FOTO-MPLS.jpg" alt="MPLS">
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
+       <div class="overflow-hidden rounded-xl h-56 bg-sky-50">
+        <img class="w-full h-full object-cover" src="FOTO-MPLS.jpg" alt="MPLS">
+       </div>
        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">✨ Kegiatan MPLS Siswa Baru</figcaption>
       </figure>
-      <!-- Diperbarui: Pengelolaan Sampah -->
-      <figure class="gallery-tile overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
-       <img class="h-56 w-full object-cover rounded-xl" src="pengelolaan-sampah.jpeg" alt="pengelolaan sampah">
+      <figure class="album-card overflow-hidden rounded-[1.7rem] bg-white shadow-sm border border-sky-100 p-3">
+       <div class="overflow-hidden rounded-xl h-56 bg-sky-50">
+        <img class="w-full h-full object-cover" src="FOTO-PENGELOLAAN-SAMPAH.jpg" alt="Pengelolaan Sampah">
+       </div>
        <figcaption class="px-2 pt-3 text-sm font-extrabold text-[#12365a]">♻️ Praktek Pengelolaan & Pemilahan Sampah</figcaption>
       </figure>
      </div>
-    </div>
+    </section>
 
     <!-- 4. GALERI VIDEO YOUTUBE -->
-    <div class="mt-16">
-     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8">
+    <section>
+     <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-8 border-b border-sky-100 pb-4">
       <div>
-       <div class="inline-flex rounded-full px-4 py-2 text-sm font-extrabold bg-red-100 text-red-600">YouTube Channel</div>
-       <h2 class="brand-font mt-4 text-3xl md:text-4xl font-bold text-[#12365a]">Galeri Video Kegiatan Sekolah</h2>
+       <span class="inline-block text-xs font-extrabold text-red-600 uppercase tracking-wider mb-1">YouTube Channel</span>
+       <h2 class="brand-font text-2xl md:text-3xl font-bold text-[#12365a]">🎬 Album Galeri Video Kegiatan Sekolah</h2>
       </div>
-      <p class="max-w-md font-semibold leading-relaxed text-[#315675] md:text-right">Saksikan dokumentasi video kegiatan dan penampilan istimewa siswa-siswi kami langsung dari YouTube.</p>
+      <p class="text-sm font-semibold text-[#315675]">Saksikan dokumentasi video kegiatan dan penampilan istimewa siswa.</p>
      </div>
 
      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Video 1: Drama Kolosal Pertempuran 10 November -->
       <article class="rounded-[2rem] bg-white p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
        <div>
         <div class="relative overflow-hidden rounded-2xl aspect-video bg-black shadow-inner">
@@ -214,7 +264,6 @@
        </div>
       </article>
 
-      <!-- Video 2: Profil & Kegiatan Sekolah -->
       <article class="rounded-[2rem] bg-white p-5 shadow-sm border border-sky-100 flex flex-col justify-between">
        <div>
         <div class="relative overflow-hidden rounded-2xl aspect-video bg-black shadow-inner flex items-center justify-center text-white bg-sky-900">
@@ -235,7 +284,7 @@
        </div>
       </article>
      </div>
-    </div>
+    </section>
 
    </div>
   </main>
